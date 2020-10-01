@@ -72,7 +72,7 @@ p_init <- function(season){
     ggplot2::scale_y_continuous(expand = c(0,0))+
     ggplot2::scale_color_manual(name = "Sample ID",
                        values =  clr_set_samples)+
-    ggplot2::labs(title = glue('Season: {season}'))+
+    ggplot2::labs(title = glue::glue('Season: {season}'))+
     ggplot2::theme_minimal()+
     ggplot2::theme(panel.border = ggplot2::element_rect(color = rgb(0,0,0,.3),
                                       fill = rgb(1,1,1,0),
@@ -104,7 +104,7 @@ p_init_hull <- function(season){
     ggplot2::scale_y_continuous(expand = c(0,0))+
     ggplot2::scale_color_manual(name = "Sample ID",
                        values =  clr_set_samples)+
-    ggplot2::labs(title = glue('Season: {season}'))+
+    ggplot2::labs(title = glue::glue('Season: {season}'))+
     ggplot2::theme_minimal()+
     ggplot2::theme(panel.border = ggplot2::element_rect(color = rgb(0,0,0,.3),
                                       fill = rgb(1,1,1,0),

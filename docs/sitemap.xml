@@ -34,6 +34,12 @@
     <loc>https://k-hench.github.io/fftidy//reference/clr_set_samples.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/compare_all_models.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/compare_n_best_models.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/crp.html</loc>
   </url>
   <url>
@@ -52,7 +58,52 @@
     <loc>https://k-hench.github.io/fftidy//reference/dtim.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_case.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_case_inv.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_f_width.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_f_width_half.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_lwd.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_plot_size.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_text_size.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fft_text_size_small.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/fit_ouf.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_akde.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_ci_ouf.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_ci_univ.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/get_pw_dists.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_var_fit_ou.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_var_fit_ouf.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_var_fit_raw.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/hull_plotter.html</loc>
@@ -67,6 +118,12 @@
     <loc>https://k-hench.github.io/fftidy//reference/island.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/m2_to_ha.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/mod_tab.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/outer_hull.html</loc>
   </url>
   <url>
@@ -79,10 +136,46 @@
     <loc>https://k-hench.github.io/fftidy//reference/p_init_hull.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/parse_cis.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/plot_ctm.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/plot_svf.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/plot_svf_vs_model.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/plot_svfs.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/plot_svfs_single.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/plot_variogram.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/s_to_day.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/sample_ids.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/separate_mod_tab.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/subs.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/svf_to_tibble.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/update_model.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/update_tau.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/wgs.html</loc>

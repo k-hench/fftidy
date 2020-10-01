@@ -129,7 +129,7 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-project-configuration" class="hasAnchor"><a href="#section-project-configuration" class="anchor"></a>Project configuration</h2>
+          <h2 id="section-project-configuration" class="hasAnchor"><a href="#section-project-configuration" class="anchor"></a>Project Configuration</h2>
           <p class="section-desc"><p>General settings that are used to keep plots consistent.</p></p>
         </th>
       </tr>
@@ -162,12 +162,60 @@
           <p><code><a href="clr_set_light.html">clr_set_light</a></code> </p>
         </td>
         <td><p>The light project color scheme</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_plot_size.html">fft_plot_size</a></code> </p>
+        </td>
+        <td><p>Default plot size</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_lwd.html">fft_lwd</a></code> </p>
+        </td>
+        <td><p>Default plot linewidth</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_text_size.html">fft_text_size</a></code> </p>
+        </td>
+        <td><p>Default plot font size</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_text_size_small.html">fft_text_size_small</a></code> </p>
+        </td>
+        <td><p>Small plot font size</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_f_width.html">fft_f_width</a></code> </p>
+        </td>
+        <td><p>Default figure width (double column)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_f_width_half.html">fft_f_width_half</a></code> </p>
+        </td>
+        <td><p>Default figure width (single column)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_case.html">fft_case()</a></code> </p>
+        </td>
+        <td><p>Project case</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fft_case_inv.html">fft_case_inv()</a></code> </p>
+        </td>
+        <td><p>Inverted project case</p></td>
       </tr>
     </tbody><tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-data-import" class="hasAnchor"><a href="#section-data-import" class="anchor"></a>Data import</h2>
-          <p class="section-desc"><p>Functions for importing fft tracking data.</p></p>
+          <h2 id="section-data-import" class="hasAnchor"><a href="#section-data-import" class="anchor"></a>Data Import</h2>
+          <p class="section-desc"><p>Functions for importing FFT tracking data.</p></p>
         </th>
       </tr>
       
@@ -191,8 +239,8 @@
     </tbody><tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-geo-related" class="hasAnchor"><a href="#section-geo-related" class="anchor"></a>Geo related</h2>
-          <p class="section-desc"><p>Geographical reference data and operations.</p></p>
+          <h2 id="section-geo-specific" class="hasAnchor"><a href="#section-geo-specific" class="anchor"></a>Geo Specific</h2>
+          <p class="section-desc"><p>Geographical reference data and operations specific to the project.</p></p>
         </th>
       </tr>
       
@@ -201,6 +249,12 @@
       
       
       <tr>
+        
+        <td>
+          <p><code><a href="crp.html">crp()</a></code> </p>
+        </td>
+        <td><p>crop a sf obj to the project bounding box</p></td>
+      </tr><tr>
         
         <td>
           <p><code><a href="wgs.html">wgs</a></code> </p>
@@ -245,6 +299,18 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="cent_plotter.html">cent_plotter()</a></code> </p>
+        </td>
+        <td><p>plot all centroids within a tibble-column of sf-objects</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="hull_plotter.html">hull_plotter()</a></code> </p>
+        </td>
+        <td><p>plot all hulls within a tibble-column of sf-objects</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="island.html">island</a></code> </p>
         </td>
         <td><p>Load Isla Barro Colorado Outline</p></td>
@@ -254,6 +320,250 @@
           <p><code><a href="dipteryx.html">dipteryx</a></code> </p>
         </td>
         <td><p>Load Locations of Dipteryx</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-geo-general" class="hasAnchor"><a href="#section-geo-general" class="anchor"></a>Geo General</h2>
+          <p class="section-desc"><p>General geographical and operations.</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="df_as_sf.html">df_as_sf()</a></code> </p>
+        </td>
+        <td><p>create the convex hull of a two column tibble with lat long columns (output as sf-obj)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="hull_tib.html">hull_tib()</a></code> </p>
+        </td>
+        <td><p>create the convex hull of a two column tibble with lat long columns (output as tibble)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="centroid_of_points.html">centroid_of_points()</a></code> </p>
+        </td>
+        <td><p>combine several sf-points and create a joint centroid</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_pw_dists.html">get_pw_dists()</a></code> </p>
+        </td>
+        <td><p>given a table with synchronous positions, compute all distances for a specific column-pair (sample-pair)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="wide_to_distmat.html">wide_to_distmat()</a></code> </p>
+        </td>
+        <td><p>transform a wide tibble with pair-wise distances into a distance-matrix</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-general-helper-functions" class="hasAnchor"><a href="#section-general-helper-functions" class="anchor"></a>General Helper Functions</h2>
+          <p class="section-desc"><p>all kinds of small data processing.</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="subs.html">subs()</a></code> </p>
+        </td>
+        <td><p>subset a list of lists by a common index (the n_th object of each sub-list)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="dtim.html">dtim()</a></code> </p>
+        </td>
+        <td><p>extract the time of the day from a date-time (as numeric seconds)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="idx_graph.html">idx_graph()</a></code> </p>
+        </td>
+        <td><p>convert an igraph-graph into a tidygraph tbl_graph, annotate with the idx (later to become the time-bin), and compute tdiverse node-centralities</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-base-plots" class="hasAnchor"><a href="#section-base-plots" class="anchor"></a>Base Plots</h2>
+          <p class="section-desc"><p>Base layers for ggplots.</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="p_init.html">p_init()</a></code> </p>
+        </td>
+        <td><p>initialize a field-trip specific base-plot</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="p_init_hull.html">p_init_hull()</a></code> </p>
+        </td>
+        <td><p>initialize a field-trip specific base-plot (with individuals range)</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-ctmm-related-content" class="hasAnchor"><a href="#section-ctmm-related-content" class="anchor"></a>ctmm related content</h2>
+          <p class="section-desc"><p>Functions to modify ctmm results.</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="plot_svfs_single.html">plot_svfs_single()</a></code> </p>
+        </td>
+        <td><p>function to plot a variogram in the correct color of athe sample</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="plot_svfs.html">plot_svfs()</a></code> </p>
+        </td>
+        <td><p>function to create a variogram plot pair (initial close up and total data range)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="plot_svf_vs_model.html">plot_svf_vs_model()</a></code> </p>
+        </td>
+        <td><p>function to compare variogram with a model fit (initial close up and total data range)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="update_tau.html">update_tau()</a></code> </p>
+        </td>
+        <td><p>manipulate ctmm model tau entry</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="update_model.html">update_model()</a></code> </p>
+        </td>
+        <td><p>manipulate ctmm model and output new model alongside original for comparison plot</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="plot_ctm.html">plot_ctm()</a></code> </p>
+        </td>
+        <td><p>plot two model (original guess and modified) in context of variogram (in right colors)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="compare_all_models.html">compare_all_models()</a></code> </p>
+        </td>
+        <td><p>function to compare variogram with all ML model fits (initial close up and total data range)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="compare_n_best_models.html">compare_n_best_models()</a></code> </p>
+        </td>
+        <td><p>function to compare variogram with the n best ML model fits (initial close up and total data range)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="parse_cis.html">parse_cis()</a></code> </p>
+        </td>
+        <td><p>functions to parse estimated model parameters (mu &amp; tau) from ctmm</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_ci_univ.html">get_ci_univ()</a></code> </p>
+        </td>
+        <td><p>universal function (works for both OU &amp; OUF)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_ci_ouf.html">get_ci_ouf()</a></code> </p>
+        </td>
+        <td><p>function for OUF specific parameters (tau2)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="mod_tab.html">mod_tab()</a></code> </p>
+        </td>
+        <td><p>wrapper to get sigma, tauH, tauF, and speed estimates of a model</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="separate_mod_tab.html">separate_mod_tab()</a></code> </p>
+        </td>
+        <td><p>separate  ctmm model estimates from units</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="fit_ouf.html">fit_ouf()</a></code> </p>
+        </td>
+        <td><p>function to create and fit a Ornstein-Uhlenbeck-F model to a semi-variance function</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_akde.html">get_akde()</a></code> </p>
+        </td>
+        <td><p>function for automatizing autocorrelated kernel density estimation</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="m2_to_ha.html">m2_to_ha()</a></code> </p>
+        </td>
+        <td><p>convert SI units (m2 -&gt; ha)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="s_to_day.html">s_to_day()</a></code> </p>
+        </td>
+        <td><p>convert SI units (s -&gt; day)</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="plot_variogram.html">plot_variogram()</a></code> </p>
+        </td>
+        <td><p>modified plot.variogram from ctmm</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="plot_svf.html">plot_svf()</a></code> </p>
+        </td>
+        <td><p>modified plot.svf from ctmm</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_var_fit_raw.html">get_var_fit_raw()</a></code> </p>
+        </td>
+        <td><p>Extract a fitted parameter from a ctmm object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_var_fit_ou.html">get_var_fit_ou()</a></code> </p>
+        </td>
+        <td><p>Extract a OU fitted parameter from a ctmm object</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_var_fit_ouf.html">get_var_fit_ouf()</a></code> </p>
+        </td>
+        <td><p>Extract a OUF fitted parameter from a ctmm object</p></td>
       </tr>
     </tbody>
     </table>

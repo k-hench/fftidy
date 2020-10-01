@@ -13,7 +13,7 @@ figures:
   dev: png
 
 reference:
-  - title: "Project configuration"
+  - title: "Project Configuration"
     desc: >
       General settings that are used to keep plots consistent.
     contents:
@@ -21,17 +21,26 @@ reference:
       - clr_set_base
       - clr_set_samples
       - clr_set_light
-
-  - title: "Data import"
+      - fft_plot_size
+      - fft_lwd
+      - fft_text_size
+      - fft_text_size_small
+      - fft_f_width
+      - fft_f_width_half
+      - fft_case
+      - fft_case_inv
+  - title: "Data Import"
     desc: >
-      Functions for importing fft tracking data.
+      Functions for importing FFT tracking data.
     contents:
       - data_extend
       - data_fft
-  - title: "Geo related"
+  - title: "Geo Specific"
     desc: >
-      Geographical reference data and operations.
+      Geographical reference data and operations
+      specific to the project.
     contents:
+      - crp
       - wgs
       - bb
       - outer_hull
@@ -39,6 +48,58 @@ reference:
       - central_point
       - outer_hull_sf
       - central_point_crs
+      - cent_plotter
+      - hull_plotter
+      - merge_sf_columns
       - island
       - dipteryx
+  - title: "Geo General"
+    desc: >
+      General geographical and operations.
+    contents:
+      - df_as_sf
+      - hull_tib
+      - centroid_of_points
+      - get_pw_dists
+      - wide_to_distmat
+  - title: "General Helper Functions"
+    desc: >
+      all kinds of small data processing.
+    contents:
+      - subs
+      - dtim
+      - idx_graph
+  - title: "Base Plots"
+    desc: >
+      Base layers for ggplots.
+    contents:
+      - p_init
+      - p_init_hull
+      - p_init_voronoi
+  - title: "ctmm related content"
+    desc: >
+      Functions to modify ctmm results.
+    contents:
+      - plot_svfs_single
+      - plot_svfs
+      - plot_svf_vs_model
+      - update_tau
+      - update_model
+      - plot_ctm
+      - compare_all_models
+      - compare_n_best_models
+      - parse_cis
+      - get_ci_univ
+      - get_ci_ouf
+      - mod_tab
+      - separate_mod_tab
+      - fit_ouf
+      - get_akde
+      - m2_to_ha
+      - s_to_day
+      - plot_variogram
+      - plot_svf
+      - get_var_fit_raw
+      - get_var_fit_ou
+      - get_var_fit_ouf
 
