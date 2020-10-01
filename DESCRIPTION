@@ -1,0 +1,29 @@
+Package: fftidy
+Title: Provides the R scripts for inner capuchin dominance analysis of the food for thought project
+Version: 0.0.0.90000
+Authors@R: 
+    person(given = "Kosmas",
+           family = "Hench",
+           role = c("aut", "cre"),
+           email = "khench@posteo.net",
+           comment = c(ORCID = "0000-0003-1119-187X"))
+URL: https://github.com/k-hench/fftidy
+BugReports: https://github.com/k-hench/fftidy/issues
+Description: This package provides the R scripts for
+    inner capuchin dominance analysis of
+    the food for thought project of the MPI AB
+License: GPL-3 | file LICENSE
+Encoding: UTF-8
+LazyData: true
+Depends: tidyverse,
+         ctmm,
+         vroom,
+         prismatic,
+         suncalc,
+         raster,
+         tidygraph,
+         ggforce,
+         ggalt
+Imports: 
+VignetteBuilder: knitr
+RoxygenNote: 7.1.0

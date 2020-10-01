@@ -1,0 +1,44 @@
+destination: docs
+url: https://k-hench.github.io/fftidy/
+
+authors:
+  Kosmas Hench:
+    href: https://k-hench.github.io/kh/
+
+template:
+  params:
+    bootswatch: yeti
+
+figures:
+  dev: png
+
+reference:
+  - title: "Project configuration"
+    desc: >
+      General settings that are used to keep plots consistent.
+    contents:
+      - sample_ids
+      - clr_set_base
+      - clr_set_samples
+      - clr_set_light
+
+  - title: "Data import"
+    desc: >
+      Functions for importing fft tracking data.
+    contents:
+      - data_extend
+      - data_fft
+  - title: "Geo related"
+    desc: >
+      Geographical reference data and operations.
+    contents:
+      - wgs
+      - bb
+      - outer_hull
+      - central_point_sf
+      - central_point
+      - outer_hull_sf
+      - central_point_crs
+      - island
+      - dipteryx
+
