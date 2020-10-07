@@ -7,6 +7,18 @@ Please also look at the [documentation](https://k-hench.github.io/fftidy/).
 ## Install
 
 To install **fftidy** please run:
+```bash
+git clone https://github.com/k-hench/fftidy.git
+
+cd fftidy
+
+ln -s path/to/data ./
+
+mkdir resources
+cd resources/
+ln -s path/to/geo_reference_data ./
 ```
-remotes::install_github("k-hench/fftidy")
+
+```r
+remotes::install_local("path/to/fftidy")
 ```
