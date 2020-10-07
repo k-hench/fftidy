@@ -8,7 +8,18 @@ The **R** package **fftidy** provides the R scripts for
 
 To install **fftidy** please run:
 
-```r
-remotes::install_github("k-hench/fftidy")
+```bash
+git clone https://github.com/k-hench/fftidy.git
+
+cd fftidy
+
+ln -s path/to/data ./
+
+mkdir resources
+cd resources/
+ln -s path/to/geo_reference_data ./
 ```
 
+```r
+remotes::install_local("path/to/fftidy")
+```
