@@ -47,5 +47,5 @@ data_extend <- function(data){
                                   pad = 0), ":00")))
 }
 
-#' @export
-ext_data <- data  %>% data_extend()
+# #' @export
+# ext_data <- data  %>% data_extend()

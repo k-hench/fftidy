@@ -1,6 +1,6 @@
 Package: fftidy
 Title: Provides the R scripts for inner capuchin dominance analysis of the food for thought project
-Version: 0.0.0.90000
+Version: 0.0.0.90001
 Authors@R: 
     person(given = "Kosmas",
            family = "Hench",
