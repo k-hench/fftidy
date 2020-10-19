@@ -9,7 +9,7 @@
 #'
 #' @export
 #' @examples
-#' ext_data <- data_fft(data_path = "data/fft_capuchins_only.csv.gz") %>% data_extend()
+#' ext_data <- data_fft() %>% data_extend()
 #' head(ext_data)
 data_extend <- function(data){
   data %>%
@@ -47,5 +47,5 @@ data_extend <- function(data){
                                   pad = 0), ":00")))
 }
 
-#' @export
-ext_data <- data  %>% data_extend()
+# #' @export
+# ext_data <- data  %>% data_extend()

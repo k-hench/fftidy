@@ -63,3 +63,25 @@ clr_set_light <- clr_set_samples %>% prismatic::clr_lighten(shift = .6) %>% purr
 #' @examples
 #' clr_set_alpha
 clr_set_alpha <- clr_set_samples %>% prismatic::clr_alpha(alpha = .15) %>% purrr::set_names(nm = sample_ids)
+
+
+#' Style text with crayon
+#'
+#' @export
+crayon_set_clr <- function(string, clr,...){
+  crayon::combine_styles(crayon::make_style(clr, bg = TRUE),
+                         crayon::make_style(prismatic::clr_darken(clr,
+                                                                  shift = .7)))(string,...)
+  }
+
+#' Display sample colors
+#'
+#' @export
+display_sample_clr <- function(){
+  clr_set_base %>%
+    names() %>%
+    purrr::map2(.y = crayon_set_clr, .f = set_clr) %>%
+    stringr::str_c(collapse = "\n") %>%
+    cat()
+  }
+

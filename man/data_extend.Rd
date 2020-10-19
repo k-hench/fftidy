@@ -13,7 +13,7 @@ data_extend(data)
 \code{extend_data} computes additional simple metrics from the raw capuchin tracking data
 }
 \examples{
-ext_data <- data_fft(data_path = "data/fft_capuchins_only.csv.gz") \%>\% data_extend()
+ext_data <- data_fft() \%>\% data_extend()
 head(ext_data)
 }
 \seealso{

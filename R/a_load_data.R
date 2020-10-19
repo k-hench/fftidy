@@ -19,6 +19,6 @@ data_fft <- function(data_path = "data/fft_capuchins_only.csv.gz"){
          field_season = c(2015, 2017)[2-(as.numeric(timestamp < lubridate::ymd_hms("2017-06-01 00:00:00 UTC")))])
 }
 
-#' @export
-data <- data_fft()
+# #' @export
+# data <- data_fft()
 
