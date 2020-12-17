@@ -9,7 +9,6 @@
 #' fft_plot_size
 fft_plot_size <- .2
 
-
 #' Default plot linewidth
 #'
 #' \code{fft_lwd} sets the linewidth in plots.

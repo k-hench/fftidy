@@ -11,6 +11,24 @@ sample_ids <- c("Bob 4661", "Da Vinci 5764", "Ibeth 4654",
                 "Martinelli 5763", "Mimi 4660", "Norah 4655",
                 "Olga 4657", "Valoy 5766")
 
+#' The sample year-class
+#'
+#' \code{sample_years} contains the field season for each sample.
+#'
+#' @export
+#' @examples
+#' sample_years
+sample_years <- c(
+  `Bob 4661` = 2017,
+  `Da Vinci 5764` = 2017,
+  `Ibeth 4654` = 2015,
+  `Martinelli 5763` = 2017,
+  `Mimi 4660` = 2015,
+  `Norah 4655` = 2017,
+  `Olga 4657` = 2015,
+  `Valoy 5766` = 2017
+)
+
 #' The basic color scheme for the sample IDs
 #'
 #' \code{clr_set_base} contains base colors of the project color scheme

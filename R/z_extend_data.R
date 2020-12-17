@@ -13,6 +13,8 @@
 #' head(ext_data)
 data_extend <- function(data){
   data %>%
+    dplyr::mutate(date = glue::glue("{lubridate::year(timestamp)}-{lubridate::month(timestamp)}-{lubridate::day(timestamp)}")) %>%
+    dplyr::left_join(readr::read_tsv("data/fieldtrip_days.tsv.gz")) %>%
     dplyr::mutate(week = day%/%7,
                   wday = (day-1) %% 7 + 1,
                   clean_week = lubridate::week(timestamp),
