@@ -20,9 +20,11 @@ reference:
       - sample_ids
       - sample_years
       - bic_proj
+      - clr_accent
       - clr_set_base
       - clr_set_samples
       - clr_set_light
+      - clr_water
       - fft_plot_size
       - fft_lwd
       - fft_text_size

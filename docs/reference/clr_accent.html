@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The basic color scheme for the sample IDs — clr_set_base • fftidy</title>
+<title>Highlighter Color — clr_accent • fftidy</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -46,8 +46,8 @@
 
 
 
-<meta property="og:title" content="The basic color scheme for the sample IDs — clr_set_base" />
-<meta property="og:description" content="clr_set_base contains base colors of the project color scheme" />
+<meta property="og:title" content="Highlighter Color — clr_accent" />
+<meta property="og:description" content="clr_accent defines a highlighter color." />
 <meta property="og:image" content="https://k-hench.github.io/fftidy/logo.png" />
 
 
@@ -116,38 +116,22 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>The basic color scheme for the sample IDs</h1>
-    <small class="dont-index">Source: <a href='https://github.com/k-hench/fftidy/blob/master/R/sample_colors.R'><code>R/sample_colors.R</code></a></small>
-    <div class="hidden name"><code>clr_set_base.Rd</code></div>
+    <h1>Highlighter Color</h1>
+    <small class="dont-index">Source: <a href='https://github.com/k-hench/fftidy/blob/master/R/project_config.R'><code>R/project_config.R</code></a></small>
+    <div class="hidden name"><code>clr_accent.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p><code>clr_set_base</code> contains base colors of the project color scheme</p>
+    <p><code>clr_accent</code> defines a highlighter color.</p>
     </div>
 
-    <pre class="usage"><span class='no'>clr_set_base</span></pre>
+    <pre class="usage"><span class='no'>clr_accent</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>An object of class <code>colors</code> of length 8.</p>
-    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+    <p>An object of class <code>character</code> of length 1.</p>
 
-    <p>The color scheme is used to achieve a consistent usage of color throughout the project.</p>
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p>[fftidy::clr_set_samples] a less saturated version of the color scheme.</p>
-<p>[fftidy::clr_set_light] a lighter version of the color scheme.</p>
-<p>[fftidy::clr_set_alpha] a transparent version of the color scheme.</p></div>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>clr_set_base</span></div><div class='output co'>#&gt; &lt;colors&gt;
-#&gt; <span style='color: #080808;background-color: #FF0000;'>#E41A1CFF</span><span> </span><span style='color: #080808;background-color: #5F87D7;'>#377EB8FF</span><span> </span><span style='color: #080808;background-color: #5FD75F;'>#4DAF4AFF</span><span> </span><span style='color: #080808;background-color: #FF8700;'>#FF7F00FF</span><span> </span><span style='color: #080808;background-color: #AF5FAF;'>#984EA3FF</span><span> </span><span style='color: #080808;background-color: #FFFF5F;'>#FFFF33FF</span><span> </span><span style='color: #080808;background-color: #AF8700;'>#A65628FF</span><span> </span><span style='color: #080808;background-color: #FFAFD7;'>#F781BFFF</span><span> </div><div class='input'><span class='no'>clr_set_samples</span></div><div class='output co'>#&gt; &lt;colors&gt;
-#&gt; </span><span style='color: #080808;background-color: #D75F5F;'>#D02E30FF</span><span> </span><span style='color: #080808;background-color: #5F87D7;'>#447DABFF</span><span> </span><span style='color: #080808;background-color: #87AF5F;'>#56A554FF</span><span> </span><span style='color: #080808;background-color: #FF8700;'>#E67F19FF</span><span> </span><span style='color: #080808;background-color: #AF87AF;'>#92569AFF</span><span> </span><span style='color: #080808;background-color: #FFFF5F;'>#EBEB47FF</span><span> </span><span style='color: #080808;background-color: #AF875F;'>#995935FF</span><span> </span><span style='color: #080808;background-color: #FFAFD7;'>#EB8DBEFF</span><span> </div><div class='input'><span class='no'>clr_set_light</span></div><div class='output co'>#&gt; &lt;colors&gt;
-#&gt; </span><span style='color: #080808;background-color: #FFD7D7;'>#ECABACFF</span><span> </span><span style='color: #080808;background-color: #D7D7FF;'>#B1CBE0FF</span><span> </span><span style='color: #080808;background-color: #D7FFD7;'>#BBDCBAFF</span><span> </span><span style='color: #080808;background-color: #FFD7AF;'>#F5CCA3FF</span><span> </span><span style='color: #080808;background-color: #D7D7FF;'>#D5BAD8FF</span><span> </span><span style='color: #080808;background-color: #FFFFD7;'>#F7F7B5FF</span><span> </span><span style='color: #080808;background-color: #FFD7AF;'>#E0BAA5FF</span><span> </span><span style='color: #080808;background-color: #FFD7FF;'>#F7D1E5FF</span><span> </div><div class='input'><span class='no'>clr_set_alpha</span></div><div class='output co'>#&gt; &lt;colors&gt;
-#&gt; </span><span style='color: #080808;background-color: #D75F5F;'>#D02E3026</span><span> </span><span style='color: #080808;background-color: #5F87D7;'>#447DAB26</span><span> </span><span style='color: #080808;background-color: #87AF5F;'>#56A55426</span><span> </span><span style='color: #080808;background-color: #FF8700;'>#E67F1926</span><span> </span><span style='color: #080808;background-color: #AF87AF;'>#92569A26</span><span> </span><span style='color: #080808;background-color: #FFFF5F;'>#EBEB4726</span><span> </span><span style='color: #080808;background-color: #AF875F;'>#99593526</span><span> </span><span style='color: #080808;background-color: #FFAFD7;'>#EB8DBE26</span><span> </div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>clr_set_base</span>)</div><div class='output co'>#&gt; [1] "Bob 4661"        "Da Vinci 5764"   "Ibeth 4654"      "Martinelli 5763"
-#&gt; [5] "Mimi 4660"       "Norah 4655"      "Olga 4657"       "Valoy 5766"     </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

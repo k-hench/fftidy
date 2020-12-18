@@ -103,3 +103,17 @@ fft_case_inv <- function(x){
 #'
 #' @export
 bic_proj <- "+proj=utm +zone=17 +north +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"
+
+#' Highlighter Color
+#'
+#' \code{clr_accent} defines a highlighter color.
+#'
+#' @export
+clr_accent <- "#ff8b3e"
+
+#' Water Color
+#'
+#' \code{clr_water} defines a water color for maps.
+#'
+#' @export
+clr_water <- "#E5E5E5" %>% prismatic::clr_darken(shift = .15)
