@@ -60,6 +60,8 @@ reference:
       - gatun
       - canal
       - pan_detail
+      - sample_as_stars
+      - sf_raster_empty
   - title: "Geo General"
     desc: >
       General geographical and operations.

@@ -52,6 +52,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/compare_n_best_models.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/count_no_na.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/crayon_set_clr.html</loc>
   </url>
   <url>
@@ -106,6 +109,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/gatun.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/geom_hypo_grob.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/get_akde.html</loc>
   </url>
   <url>
@@ -131,6 +137,9 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/hull_tib.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/hypo_geom_grob_custom.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/idx_graph.html</loc>
@@ -187,6 +196,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/s_to_day.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/sample_as_stars.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/sample_ids.html</loc>
   </url>
   <url>
@@ -194,6 +206,9 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/separate_mod_tab.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/sf_raster_empty.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/subs.html</loc>

@@ -46,7 +46,14 @@ data_extend <- function(data){
                           lubridate::hour(timestamp), ":",
                           str_pad(as.character(min_prep),
                                   width = 2,
-                                  pad = 0), ":00")))
+                                  pad = 0), ":00")),
+                  sun_noon = suncalc::getSunlightTimes(date = date,
+                                                       lat = central_point$lat,
+                                                       lon = central_point$long,
+                                                       tz = "EST")$solarNoon,
+                  dist_to_noon_h = difftime(timestamp_pan, sun_noon, units = "hours") %>%
+                    abs() %>%
+                    as.numeric())
 }
 
 # #' @export
