@@ -60,3 +60,24 @@ island <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_outline.shp")
 #' @examples
 #' ggplot()+ geom_sf(data = fftidy::island) + geom_sf(data = fftidy::dipteryx, fill = "red" )
 dipteryx <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_Dipteryx_Patches.shp")
+
+
+#' Load Gatun Lake Outline
+#' @export
+#' @examples
+#' ggplot()+ geom_sf(data = gatun)
+gatun <- sf::read_sf("resources/geo_reference_data/OSM_layers/gatun.shp") %>%
+  sf::st_transform(crs = 4326)
+
+#' Load Panama Canal
+#' @export
+#' @examples
+#' ggplot()+ geom_sf(data = canal)
+canal <- sf::read_sf("resources/geo_reference_data/OSM_layers/panama_canal.shp") %>%
+  sf::st_transform(crs = 4326)
+
+#' Load clipped Panama Coastline
+#' @export
+#' @examples
+#' ggplot()+ geom_sf(data = pan_detail)
+pan_detail <- sf::read_sf("resources/geo_reference_data/GADM_layers/panama_clip.shp")

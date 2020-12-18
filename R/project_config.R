@@ -96,3 +96,10 @@ fft_case <- function(x){
 fft_case_inv <- function(x){
   stringr::str_to_upper(x)
 }
+
+#' Project UTM crs
+#'
+#' \code{bic_proj} holds the project UTM projection.
+#'
+#' @export
+bic_proj <- "+proj=utm +zone=17 +north +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"

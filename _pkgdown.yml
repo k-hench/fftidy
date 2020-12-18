@@ -19,6 +19,7 @@ reference:
     contents:
       - sample_ids
       - sample_years
+      - bic_proj
       - clr_set_base
       - clr_set_samples
       - clr_set_light
@@ -54,6 +55,9 @@ reference:
       - merge_sf_columns
       - island
       - dipteryx
+      - gatun
+      - canal
+      - pan_detail
   - title: "Geo General"
     desc: >
       General geographical and operations.
