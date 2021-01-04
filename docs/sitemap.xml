@@ -121,6 +121,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/get_ci_univ.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_param_estimate.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/get_pw_dists.html</loc>
   </url>
   <url>
@@ -191,6 +194,9 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/plot_variogram.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/read_all_ml_fits.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/s_to_day.html</loc>
