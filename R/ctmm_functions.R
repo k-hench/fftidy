@@ -445,3 +445,25 @@ get_var_fit_ouf <- function(vario, xlim = c(0, 50), n = 200){
            sigma = var_f$sigma[[1]] ,
            tau = var_f$tau[[1]])
 }
+
+#' Get the parameter estimates from a ctmm fitted model
+#' @export
+get_param_estimate <- function(mod){
+  summary(mod)$CI %>%
+    as.data.frame() %>%
+    mutate(param = row.names(.)) %>%
+    select(param, est)
+}
+
+#' Load all ctmm fitted models
+#' @export
+read_all_ml_fits <- function(files){
+  files %>%
+    purrr::map_dfr(readRDS) %>%
+    dplyr::group_by(sample_id) %>%
+    dplyr::summarise(all_models = list(fitted_ml),
+                     model_summary = list(summary(fitted_ml)),
+                     best_model = list(fitted_ml[[1]]),
+                     best_model_name = summary(fitted_ml[[1]])$name,
+                     best_bodel_summary = list(get_param_estimate(fitted_ml[[1]]) %>% mutate(sample_id = sample_id[[1]])))
+}

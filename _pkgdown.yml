@@ -100,11 +100,13 @@ reference:
       - parse_cis
       - get_ci_univ
       - get_ci_ouf
+      - get_param_estimate
       - mod_tab
       - separate_mod_tab
       - fit_ouf
       - get_akde
       - m2_to_ha
+      - read_all_ml_fits
       - s_to_day
       - plot_variogram
       - plot_svf
