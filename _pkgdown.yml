@@ -54,6 +54,7 @@ reference:
       - central_point_crs
       - cent_plotter
       - hull_plotter
+      - neighboring_samples
       - merge_sf_columns
       - island
       - dipteryx

@@ -1,9 +1,9 @@
-#' Neigbouring groups
+#' Neighboring groups
 #'
-#' Groups neighbouring each other (possible encouters)
+#' Groups neighboring each other (possible encouters)
 #'
 #' @export
-neighbouring_samples <- tribble(
+neighboring_samples <- tribble(
   ~year, ~west, ~east,
   2015, "Olga 4657", "Mimi 4660",
   2015,  "Mimi 4660", "Ibeth 4654",
