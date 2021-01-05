@@ -17,22 +17,22 @@ reference:
     desc: >
       General settings that are used to keep plots consistent.
     contents:
-      - sample_ids
-      - sample_years
       - bic_proj
       - clr_accent
       - clr_set_base
-      - clr_set_samples
       - clr_set_light
+      - clr_set_samples
       - clr_water
-      - fft_plot_size
-      - fft_lwd
-      - fft_text_size
-      - fft_text_size_small
-      - fft_f_width
-      - fft_f_width_half
       - fft_case
       - fft_case_inv
+      - fft_f_width
+      - fft_f_width_half
+      - fft_lwd
+      - fft_plot_size
+      - fft_text_size
+      - fft_text_size_small
+      - sample_ids
+      - sample_years
   - title: "Data Import"
     desc: >
       Functions for importing FFT tracking data.
@@ -44,42 +44,42 @@ reference:
       Geographical reference data and operations
       specific to the project.
     contents:
-      - crp
-      - wgs
       - bb
-      - outer_hull
-      - central_point_sf
-      - central_point
-      - outer_hull_sf
-      - central_point_crs
+      - canal
       - cent_plotter
-      - hull_plotter
-      - neighboring_samples
-      - merge_sf_columns
-      - island
+      - central_point
+      - central_point_crs
+      - central_point_sf
+      - crp
       - dipteryx
       - gatun
-      - canal
+      - hull_plotter
+      - island
+      - merge_sf_columns
+      - neighboring_samples
+      - outer_hull
+      - outer_hull_sf
       - pan_detail
       - sample_as_stars
       - sf_raster_empty
+      - wgs
   - title: "Geo General"
     desc: >
       General geographical and operations.
     contents:
-      - df_as_sf
-      - tibble_to_sf
-      - hull_tib
       - centroid_of_points
+      - df_as_sf
       - get_pw_dists
+      - hull_tib
+      - tibble_to_sf
       - wide_to_distmat
   - title: "General Helper Functions"
     desc: >
       all kinds of small data processing.
     contents:
-      - subs
       - dtim
       - idx_graph
+      - subs
   - title: "Base Plots"
     desc: >
       Base layers for ggplots.
@@ -91,30 +91,32 @@ reference:
     desc: >
       Functions to modify ctmm results.
     contents:
-      - plot_svfs_single
-      - plot_svfs
-      - plot_svf_vs_model
-      - update_tau
-      - update_model
-      - plot_ctm
       - compare_all_models
       - compare_n_best_models
-      - parse_cis
+      - fit_ouf
+      - get_akde
+      - get_akde_aligned
+      - get_akde_maual
       - get_ci_univ
       - get_ci_ouf
       - get_param_estimate
-      - mod_tab
-      - separate_mod_tab
-      - fit_ouf
-      - get_akde
-      - m2_to_ha
-      - read_all_ml_fits
-      - s_to_day
-      - plot_variogram
-      - plot_svf
       - get_var_fit_raw
       - get_var_fit_ou
       - get_var_fit_ouf
+      - m2_to_ha
+      - mod_tab
+      - parse_cis
+      - plot_ctm
+      - plot_svf
+      - plot_svf_vs_model
+      - plot_svfs
+      - plot_svfs_single
+      - plot_variogram
+      - read_all_ml_fits
+      - s_to_day
+      - separate_mod_tab
+      - update_model
+      - update_tau
   - title: "encounter related content"
     desc: >
       Functions to calcultate pair wise distances and encounters.

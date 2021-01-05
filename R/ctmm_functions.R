@@ -467,3 +467,25 @@ read_all_ml_fits <- function(files){
                      best_model_name = summary(fitted_ml[[1]])$name,
                      best_bodel_summary = list(get_param_estimate(fitted_ml[[1]]) %>% mutate(sample_id = sample_id[[1]])))
 }
+
+#' Load ctmm based AKDEs by Sample ID
+#' @export
+get_akde_maual <- function(data, fitted_mls, id, ...){
+  cat(paste0(id, "\n"))
+
+  tibble(sample_id = id,
+         akde = list(akde(data[[id]],
+                          fitted_mls$best_model[fitted_mls$sample_id == id])))
+}
+
+#' Load ctmm based AKDEs grouped by field season
+#' @export
+get_akde_aligned <- function(data, fitted_mls, year, ...){
+  cat(paste0(year, "\n"))
+
+  ctmms <- fitted_mls$best_model %>% set_names(nm = fitted_mls$sample_id)
+  sample_id_year <- fitted_mls$sample_id[fitted_mls$sample_id %in% meta$id[meta$year == year]]
+
+  tibble(year = year,
+         akde = akde(data[sample_id_year], ctmms[sample_id_year]))
+}
