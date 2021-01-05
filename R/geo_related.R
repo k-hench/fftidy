@@ -137,3 +137,14 @@ sample_as_stars <- function(sample_id, res = 50, data_in, ...){
 #' Count all non-NAs
 #' @export
 count_no_na <- function(x){sum(!is.na(x))}
+
+#' Convert GPS tibble into sf object
+#'
+#' @export
+tibble_to_sf <- function(tib, crs = 4326){
+  tib %>%
+    rename(long = "location.long",
+           lat = "location.lat") %>%
+    st_as_sf(., coords = c("long", "lat")) %>%
+    st_set_crs(., crs)
+}

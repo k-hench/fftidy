@@ -68,6 +68,7 @@ reference:
       General geographical and operations.
     contents:
       - df_as_sf
+      - tibble_to_sf
       - hull_tib
       - centroid_of_points
       - get_pw_dists
@@ -114,4 +115,9 @@ reference:
       - get_var_fit_raw
       - get_var_fit_ou
       - get_var_fit_ouf
+  - title: "encounter related content"
+    desc: >
+      Functions to calcultate pair wise distances and encounters.
+    contents:
+      - complex_distance
 

@@ -52,6 +52,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/compare_n_best_models.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/complex_distance.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/count_no_na.html</loc>
   </url>
   <url>
@@ -221,6 +224,9 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/svf_to_tibble.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/tibble_to_sf.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/update_model.html</loc>
