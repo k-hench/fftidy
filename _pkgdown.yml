@@ -122,4 +122,9 @@ reference:
       Functions to calcultate pair wise distances and encounters.
     contents:
       - complex_distance
-
+  - title: "simulations related content"
+    desc: >
+      Functions to to help with the {ctmm} based simulation of movement tracks.
+    contents:
+      - sim_to_sf
+      - simulate_id
