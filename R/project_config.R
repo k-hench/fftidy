@@ -1,3 +1,16 @@
+#' The sample IDs
+#'
+#' \code{sample_ids} contains the sample name and the collar ID.
+#'
+#' The IDs are ordered according to their occurrence in the FFT data set.
+#'
+#' @export
+#' @examples
+#' sample_ids
+sample_ids <- c("Bob 4661", "Da Vinci 5764", "Ibeth 4654",
+                "Martinelli 5763", "Mimi 4660", "Norah 4655",
+                "Olga 4657", "Valoy 5766")
+
 #' Default plot size
 #'
 #' \code{fft_plot_size} sets the default size of data points in plots.
@@ -117,3 +130,40 @@ clr_accent <- "#ff8b3e"
 #'
 #' @export
 clr_water <- "#E5E5E5" %>% prismatic::clr_darken(shift = .15)
+
+#' Abbreviations of sample IDs
+#'
+#' \code{sample_ids_short} contains a two character sample ID abbreviation.
+#'
+#' @export
+sample_ids_short <- sample_ids %>% set_names(nm = str_sub(sample_ids,1,2))
+
+#' Reference vector short to long sample ID
+#'
+#' \code{samples_short} contains a named vector of the sample IDs.
+#'
+#' @export
+samples_short <- sample_ids %>%
+  set_names(nm = str_sub(sample_ids,1,2))
+
+#' Vector of all neighbor-pair_ids
+#'
+#' \code{neighbor_ids} contains all five character neighbor pair_ids.
+#'
+#' @export
+neighbor_ids <- str_c(str_sub(neighboring_samples$west,1,2),
+                      "-",
+                      str_sub(neighboring_samples$east,1,2))
+
+#' Helper for Dipteryx density plot guides
+#'
+#' \code{guide_use} contains a constructor for ggplot guides.
+#'
+#' @export
+guide_use <- function(...){
+  guide_colorbar(title = "Dipteryx Density",
+                 title.position = "top",
+                 barwidth = unit(120, "pt"),
+                 barheight = unit(7, "pt"),
+                 ...)
+}

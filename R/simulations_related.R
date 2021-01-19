@@ -48,3 +48,24 @@ simulate_id <- function(data, id_nr, ctmm_selcetion_type, fitted_tib){
           sg_sf = list(sim_g_sf),
           data_sf = list(data_sf))
 }
+
+#' Convert Simmulation results back to data format
+#'
+#' @export
+back_convert_simmulation <- function(data){
+
+  data_date_crs <- data %>%
+    st_transform(crs = bic_proj) %>%
+    mutate(t = lubridate::as_datetime(t))
+
+  crds <- data_date_crs %>%
+    st_coordinates() %>%
+    as_tibble()
+
+  data_date_crs %>%
+    mutate(individual.local.identifier = id,
+           Z = crds$X + 1i * crds$Y,
+           timestamp2 = t %>%
+             lubridate::with_tz("EST") %>%
+             lubridate::round_date( "4 minute"))
+}

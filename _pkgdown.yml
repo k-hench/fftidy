@@ -19,6 +19,8 @@ reference:
     contents:
       - bic_proj
       - clr_accent
+      - clr_neighbor
+      - clr_neighbor_alpha
       - clr_set_base
       - clr_set_light
       - clr_set_samples
@@ -31,7 +33,11 @@ reference:
       - fft_plot_size
       - fft_text_size
       - fft_text_size_small
+      - guide_use
+      - neighbor_ids
       - sample_ids
+      - sample_ids_short
+      - samples_short
       - sample_years
   - title: "Data Import"
     desc: >
@@ -122,9 +128,24 @@ reference:
       Functions to calcultate pair wise distances and encounters.
     contents:
       - complex_distance
+      - on_any_overlap
   - title: "simulations related content"
     desc: >
-      Functions to to help with the {ctmm} based simulation of movement tracks.
+      Functions to help with the {ctmm} based simulation of movement tracks.
     contents:
+      - back_convert_simmulation
       - sim_to_sf
       - simulate_id
+  - title: "accelerometer data related"
+    desc: >
+      Functions to extract accelerometer data
+    contents:
+      - xyz_d
+      - xyz_get
+  - title: "table formating"
+    desc: >
+      Functions for table formating in rmarkdown
+    contents:
+      - color_column
+      - styler_id
+      - table_theme

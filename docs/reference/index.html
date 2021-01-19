@@ -79,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90016</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90017</span>
       </span>
     </div>
 
@@ -150,6 +150,18 @@
           <p><code><a href="clr_accent.html">clr_accent</a></code> </p>
         </td>
         <td><p>Highlighter Color</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="clr_neighbor.html">clr_neighbor</a></code> </p>
+        </td>
+        <td><p>The basic color scheme for pair_ids</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="clr_neighbor_alpha.html">clr_neighbor_alpha</a></code> </p>
+        </td>
+        <td><p>The semi-transparent color scheme for pair_ids</p></td>
       </tr><tr>
         
         <td>
@@ -225,9 +237,33 @@
       </tr><tr>
         
         <td>
+          <p><code><a href="guide_use.html">guide_use()</a></code> </p>
+        </td>
+        <td><p>Helper for Dipteryx density plot guides</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="neighbor_ids.html">neighbor_ids</a></code> </p>
+        </td>
+        <td><p>Vector of all neighbor-pair_ids</p></td>
+      </tr><tr>
+        
+        <td>
           <p><code><a href="sample_ids.html">sample_ids</a></code> </p>
         </td>
         <td><p>The sample IDs</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="sample_ids_short.html">sample_ids_short</a></code> </p>
+        </td>
+        <td><p>Abbreviations of sample IDs</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="samples_short.html">samples_short</a></code> </p>
+        </td>
+        <td><p>Reference vector short to long sample ID</p></td>
       </tr><tr>
         
         <td>
@@ -673,12 +709,18 @@
           <p><code><a href="complex_distance.html">complex_distance()</a></code> </p>
         </td>
         <td><p>Compute pair wise distances within time bins</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="on_any_overlap.html">on_any_overlap()</a></code> </p>
+        </td>
+        <td><p>Determine if timepoint x is on any overlap</p></td>
       </tr>
     </tbody><tbody>
       <tr>
         <th colspan="2">
           <h2 id="section-simulations-related-content" class="hasAnchor"><a href="#section-simulations-related-content" class="anchor"></a>simulations related content</h2>
-          <p class="section-desc"><p>Functions to to help with the {ctmm} based simulation of movement tracks.</p></p>
+          <p class="section-desc"><p>Functions to help with the {ctmm} based simulation of movement tracks.</p></p>
         </th>
       </tr>
       
@@ -687,6 +729,12 @@
       
       
       <tr>
+        
+        <td>
+          <p><code><a href="back_convert_simmulation.html">back_convert_simmulation()</a></code> </p>
+        </td>
+        <td><p>Convert Simmulation results back to data format</p></td>
+      </tr><tr>
         
         <td>
           <p><code><a href="sim_to_sf.html">sim_to_sf()</a></code> </p>
@@ -698,6 +746,62 @@
           <p><code><a href="simulate_id.html">simulate_id()</a></code> </p>
         </td>
         <td><p>Simulate movement track for a particular Sample</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-accelerometer-data-related" class="hasAnchor"><a href="#section-accelerometer-data-related" class="anchor"></a>accelerometer data related</h2>
+          <p class="section-desc"><p>Functions to extract accelerometer data</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="xyz_d.html">xyz_d()</a></code> </p>
+        </td>
+        <td><p>compute delta XYZ of accelerometer data</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="xyz_get.html">xyz_get()</a></code> </p>
+        </td>
+        <td><p>get XYZ from accelerometer data</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-table-formating" class="hasAnchor"><a href="#section-table-formating" class="anchor"></a>table formating</h2>
+          <p class="section-desc"><p>Functions for table formating in rmarkdown</p></p>
+        </th>
+      </tr>
+      
+      
+    </tbody><tbody>
+      
+      
+      <tr>
+        
+        <td>
+          <p><code><a href="color_column.html">color_column()</a></code> </p>
+        </td>
+        <td><p>Color entire column based on sample_id</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="styler_id.html">styler_id()</a></code> </p>
+        </td>
+        <td><p>Color cell of of column by sample id</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="table_theme.html">table_theme</a></code> </p>
+        </td>
+        <td><p>Basic table theme</p></td>
       </tr>
     </tbody>
     </table>

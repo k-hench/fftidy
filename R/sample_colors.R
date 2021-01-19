@@ -1,16 +1,3 @@
-#' The sample IDs
-#'
-#' \code{sample_ids} contains the sample name and the collar ID.
-#'
-#' The IDs are ordered according to their occurrence in the FFT data set.
-#'
-#' @export
-#' @examples
-#' sample_ids
-sample_ids <- c("Bob 4661", "Da Vinci 5764", "Ibeth 4654",
-                "Martinelli 5763", "Mimi 4660", "Norah 4655",
-                "Olga 4657", "Valoy 5766")
-
 #' The sample year-class
 #'
 #' \code{sample_years} contains the field season for each sample.
@@ -103,3 +90,20 @@ display_sample_clr <- function(){
     cat()
   }
 
+#' The basic color scheme for pair_ids
+#'
+#' \code{clr_neighbor} contains the base colors of the project color scheme for sample pairs
+#'
+#' @export
+clr_neighbor <- rcartocolor::carto_pal(10, name = "Prism") %>%
+  prismatic::color() %>%
+  set_names(nm = neighbor_ids)
+
+#' The semi-transparent color scheme for pair_ids
+#'
+#' \code{clr_neighbor_alpha} contains a semi-transparent version of the project color scheme for sample pairs
+#'
+#' @export
+clr_neighbor_alpha <- clr_neighbor %>%
+  clr_alpha() %>%
+  set_names(nm = names(clr_neighbor))

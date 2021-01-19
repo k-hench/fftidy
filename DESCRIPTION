@@ -1,6 +1,6 @@
 Package: fftidy
 Title: Provides the R scripts for inner capuchin dominance analysis of the food for thought project
-Version: 0.0.0.90016
+Version: 0.0.0.90017
 Authors@R: 
     person(given = "Kosmas",
            family = "Hench",
@@ -23,7 +23,8 @@ Depends: tidyverse,
          raster,
          tidygraph,
          ggforce,
-         ggalt
+         ggalt,
+         reactable
 Imports: 
 VignetteBuilder: knitr
 RoxygenNote: 7.1.0

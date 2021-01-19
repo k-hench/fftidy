@@ -4,6 +4,9 @@
     <loc>https://k-hench.github.io/fftidy//index.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/back_convert_simmulation.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/bb.html</loc>
   </url>
   <url>
@@ -31,6 +34,12 @@
     <loc>https://k-hench.github.io/fftidy//reference/clr_accent.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/clr_neighbor.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/clr_neighbor_alpha.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/clr_set_alpha.html</loc>
   </url>
   <url>
@@ -44,6 +53,9 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/clr_water.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/color_column.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/compare_all_models.html</loc>
@@ -80,6 +92,9 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/dtim.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/encounter_long.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/fft_case.html</loc>
@@ -145,6 +160,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/get_var_fit_raw.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/guide_use.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/hull_plotter.html</loc>
   </url>
   <url>
@@ -166,7 +184,13 @@
     <loc>https://k-hench.github.io/fftidy//reference/mod_tab.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/neighbor_ids.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/neighboring_samples.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/on_any_overlap.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/outer_hull.html</loc>
@@ -217,7 +241,13 @@
     <loc>https://k-hench.github.io/fftidy//reference/sample_ids.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/sample_ids_short.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/sample_years.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/samples_short.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/separate_mod_tab.html</loc>
@@ -232,10 +262,16 @@
     <loc>https://k-hench.github.io/fftidy//reference/simulate_id.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/styler_id.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/subs.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/svf_to_tibble.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/table_theme.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/tibble_to_sf.html</loc>
@@ -251,5 +287,11 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/wide_to_distmat.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/xyz_d.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/xyz_get.html</loc>
   </url>
 </urlset>
