@@ -51,3 +51,10 @@ color_column <- function(name){
                             color = clr_set_base[name] %>% clr_darken()),
          style = styler_id_conditional(name))
 }
+
+#' Total a Column and ignore NAs
+#'
+#' @export
+table_total <- function(x){
+  sum(x, na.rm = TRUE)
+  }

@@ -22,7 +22,6 @@ bb <- list(
 #' \code{outer_hull} creates the outer hull of all the track within the data set.
 #'
 #' @export
-#' @examples
 outer_hull <- data_fft() %>%
   dplyr::select(location.long, location.lat) %>%
   df_as_sf()

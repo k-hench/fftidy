@@ -150,3 +150,4 @@ reference:
       - styler_id
       - styler_id_conditional
       - table_theme
+      - table_total
