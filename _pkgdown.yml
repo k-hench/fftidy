@@ -148,4 +148,5 @@ reference:
     contents:
       - color_column
       - styler_id
+      - styler_id_conditional
       - table_theme

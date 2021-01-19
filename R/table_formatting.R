@@ -15,6 +15,24 @@ styler_id <- function(x){
   list(background = colors, color = colors2)
 }
 
+#' Color table cell based on sample id
+#'
+#' @export
+styler_id_conditional <- function(x){
+  which_sample <- which(x %in% sample_ids)
+  name <- x[which_sample]
+
+  clr_style2 <- clr_set_base %>%
+    clr_darken(shift = .3) %>%
+    set_names(nm = names(clr_set_base))
+
+  colors <- rep("black", length(x))
+  colors[which_sample] <- clr_style2[name]
+
+  list(background = clr_set_alpha[name],
+       color = "black")
+}
+
 #' Basic table theme
 #'
 #' @export
