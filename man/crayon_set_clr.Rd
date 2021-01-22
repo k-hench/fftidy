@@ -9,3 +9,7 @@ crayon_set_clr(string, clr, ...)
 \description{
 Style text with crayon
 }
+\examples{
+#> Source Code:
+crayon_set_clr
+}

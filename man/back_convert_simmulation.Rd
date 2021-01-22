@@ -9,3 +9,7 @@ back_convert_simmulation(data)
 \description{
 Convert Simmulation results back to data format
 }
+\examples{
+#> Source Code:
+back_convert_simmulation
+}

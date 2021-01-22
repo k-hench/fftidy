@@ -9,3 +9,7 @@ simulate_id(data, id_nr, ctmm_selcetion_type, fitted_tib)
 \description{
 Simulate movement track for a particular Sample
 }
+\examples{
+#> Source Code:
+simulate_id
+}

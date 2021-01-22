@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -133,7 +133,27 @@
     <p>An object of class <code>sf</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 1225 rows and 5 columns.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>ggplot</span>()+ <span class='fu'>geom_sf</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>fftidy</span><span class='kw ns'>::</span><span class='no'><a href='island.html'>island</a></span>) + <span class='fu'>geom_sf</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>fftidy</span><span class='kw ns'>::</span><span class='no'>dipteryx</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"red"</span> )</div><div class='img'><img src='dipteryx-1.png' alt='' width='700' height='433' /></div></pre>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>dipteryx</span></div><div class='output co'>#&gt; Simple feature collection with 1225 features and 4 fields
+#&gt; geometry type:  POLYGON
+#&gt; dimension:      XY
+#&gt; bbox:           xmin: 624121.8 ymin: 1009725 xmax: 629731.1 ymax: 1014772
+#&gt; projected CRS:  WGS 84 / UTM zone 17N
+#&gt; <span style='color: #949494;'># A tibble: 1,225 x 5</span><span>
+#&gt;    PatchID  Area X15Flower X17Flower                                    geometry
+#&gt;      </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>     </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span>                               </span><span style='color: #949494;font-style: italic;'>&lt;POLYGON [m]&gt;</span><span>
+#&gt; </span><span style='color: #BCBCBC;'> 1</span><span>       1   513     </span><span style='text-decoration: underline;'>12</span><span>152      </span><span style='text-decoration: underline;'>4</span><span>974 ((629286.5 1013087, 629286.9 1013088, 6292…
+#&gt; </span><span style='color: #BCBCBC;'> 2</span><span>       2   503      </span><span style='text-decoration: underline;'>8</span><span>672        50 ((629547.7 1013060, 629548.3 1013060, 6295…
+#&gt; </span><span style='color: #BCBCBC;'> 3</span><span>       3   962     </span><span style='text-decoration: underline;'>10</span><span>976       407 ((629420.6 1012978, 629420.8 1012978, 6294…
+#&gt; </span><span style='color: #BCBCBC;'> 4</span><span>       4   682     </span><span style='text-decoration: underline;'>10</span><span>138         0 ((629478.2 1012849, 629478.9 1012849, 6294…
+#&gt; </span><span style='color: #BCBCBC;'> 5</span><span>       5   358      </span><span style='text-decoration: underline;'>6</span><span>067       140 ((629627 1012834, 629626.8 1012834, 629624…
+#&gt; </span><span style='color: #BCBCBC;'> 6</span><span>       6   187      </span><span style='text-decoration: underline;'>1</span><span>968         1 ((629537.4 1012908, 629536.8 1012909, 6295…
+#&gt; </span><span style='color: #BCBCBC;'> 7</span><span>       7   498      </span><span style='text-decoration: underline;'>4</span><span>215       279 ((629629 1012717, 629628.6 1012717, 629627…
+#&gt; </span><span style='color: #BCBCBC;'> 8</span><span>       8   602      </span><span style='text-decoration: underline;'>3</span><span>081       820 ((629624.2 1012390, 629623.7 1012390, 6296…
+#&gt; </span><span style='color: #BCBCBC;'> 9</span><span>       9   429      </span><span style='text-decoration: underline;'>6</span><span>755      </span><span style='text-decoration: underline;'>1</span><span>318 ((629449.5 1012382, 629450.2 1012387, 6294…
+#&gt; </span><span style='color: #BCBCBC;'>10</span><span>      10   674     </span><span style='text-decoration: underline;'>13</span><span>164       698 ((629381.4 1012462, 629380.9 1012463, 6293…
+#&gt; </span><span style='color: #949494;'># … with 1,215 more rows</span><span></div><div class='input'><span class='co'>#&gt; -------------------</span>
+<span class='fu'>ggplot</span>()+ <span class='fu'>geom_sf</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>fftidy</span><span class='kw ns'>::</span><span class='no'><a href='island.html'>island</a></span>) + <span class='fu'>geom_sf</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='kw pkg'>fftidy</span><span class='kw ns'>::</span><span class='no'>dipteryx</span>, <span class='kw'>fill</span> <span class='kw'>=</span> <span class='st'>"red"</span> )</div><div class='img'><img src='dipteryx-1.png' alt='' width='700' height='433' /></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

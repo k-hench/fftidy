@@ -9,3 +9,7 @@ read_all_ml_fits(files)
 \description{
 Load all ctmm fitted models
 }
+\examples{
+#> Source Code:
+read_all_ml_fits
+}

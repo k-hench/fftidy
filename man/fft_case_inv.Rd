@@ -16,6 +16,7 @@ This function potentially needs to be changed in case of
 resubmission to a different journal.
 }
 \examples{
+#> Source Code:
 fft_case_inv(letters[1:5])
 fft_case_inv(LETTERS[1:5])
 }

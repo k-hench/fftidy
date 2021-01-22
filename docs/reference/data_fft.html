@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -144,13 +144,16 @@
     <div class='dont-index'><p>[fftidy::extend_data()] a less saturated version of the color scheme.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>data</span> <span class='kw'>&lt;-</span> <span class='fu'>data_fft</span>()</div><div class='output co'>#&gt; <span class='error'>Error: 'data/fft_capuchins_movebank_download.tsv.gz' does not exist in current working directory ('/home/kluk/work/crofoot_lab/fftidy/docs/reference').</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>data</span>)</div><div class='output co'>#&gt;                                                                             
-#&gt; 1 function (..., list = character(), package = NULL, lib.loc = NULL,        
-#&gt; 2     verbose = getOption("verbose"), envir = .GlobalEnv, overwrite = TRUE) 
-#&gt; 3 {                                                                         
-#&gt; 4     fileExt &lt;- function(x) {                                              
-#&gt; 5         db &lt;- grepl("\\\\.[^.]+\\\\.(gz|bz2|xz)$", x)                     
-#&gt; 6         ans &lt;- sub(".*\\\\.", "", x)                                      </div></pre>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>data_fft</span></div><div class='output co'>#&gt; function (data_path = "data/fft_capuchins_movebank_download.tsv.gz") 
+#&gt; {
+#&gt;     vroom::vroom(data_path, delim = "\t") %&gt;% dplyr::mutate(timestamp = timestamp %&gt;% 
+#&gt;         lubridate::force_tz("UTC"), timestamp_pan = timestamp %&gt;% 
+#&gt;         lubridate::with_tz("EST"), field_season = c(2015, 2017)[2 - 
+#&gt;         (as.numeric(timestamp &lt; lubridate::ymd_hms("2017-06-01 00:00:00 UTC")))])
+#&gt; }
+#&gt; &lt;bytecode: 0x5591a9c4c0b0&gt;
+#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -13,4 +13,8 @@ clr_neighbor
 \description{
 \code{clr_neighbor} contains the base colors of the project color scheme for sample pairs
 }
+\examples{
+#> Source Code:
+clr_neighbor
+}
 \keyword{datasets}

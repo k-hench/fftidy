@@ -9,8 +9,8 @@
 #'
 #' @export
 #' @examples
-#' ext_data <- data_fft() %>% data_extend()
-#' head(ext_data)
+#' #> Source Code:
+#' data_extend
 data_extend <- function(data){
   data %>%
     dplyr::mutate(date = glue::glue("{lubridate::year(timestamp)}-{lubridate::month(timestamp)}-{lubridate::day(timestamp)}")) %>%

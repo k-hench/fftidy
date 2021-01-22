@@ -13,4 +13,8 @@ bb
 \description{
 \code{bb} set the bounding box framing Isla Barro Colorado
 }
+\examples{
+#> Source Code:
+bb
+}
 \keyword{datasets}

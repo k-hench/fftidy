@@ -105,6 +105,7 @@ reference:
       - get_akde_maual
       - get_ci_univ
       - get_ci_ouf
+      - get_kriged_occurrence_maual
       - get_param_estimate
       - get_var_fit_raw
       - get_var_fit_ou
@@ -140,6 +141,7 @@ reference:
     desc: >
       Functions to extract accelerometer data
     contents:
+      - assign_overlaps_acc
       - xyz_d
       - xyz_get
   - title: "table formating"

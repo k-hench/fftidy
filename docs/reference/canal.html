@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -133,7 +133,9 @@
     <p>An object of class <code>sf</code> (inherits from <code>tbl_df</code>, <code>tbl</code>, <code>data.frame</code>) with 48 rows and 23 columns.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>ggplot</span>()+ <span class='fu'>geom_sf</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>canal</span>)</div><div class='img'><img src='canal-1.png' alt='' width='700' height='433' /></div></pre>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>canal</span></div><div class='output co'>#&gt; <span class='error'>Error: Input must be a vector, not a `sfc_MULTILINESTRING/sfc` object.</span></div><div class='input'><span class='co'>#&gt; -------------------</span>
+<span class='fu'>ggplot</span>()+ <span class='fu'>geom_sf</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>canal</span>)</div><div class='img'><img src='canal-1.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

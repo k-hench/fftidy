@@ -9,3 +9,7 @@ styler_id(x)
 \description{
 Color cell of of column by sample id
 }
+\examples{
+#> Source Code:
+styler_id
+}

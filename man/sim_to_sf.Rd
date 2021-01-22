@@ -9,3 +9,7 @@ sim_to_sf(SIM, id_nr, type)
 \description{
 used in simulate_id()
 }
+\examples{
+#> Source Code:
+sim_to_sf
+}

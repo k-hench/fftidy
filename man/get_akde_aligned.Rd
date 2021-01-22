@@ -9,3 +9,7 @@ get_akde_aligned(data, fitted_mls, year, ...)
 \description{
 Load ctmm based AKDEs grouped by field season
 }
+\examples{
+#> Source Code:
+get_akde_aligned
+}

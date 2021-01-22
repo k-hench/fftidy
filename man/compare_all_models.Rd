@@ -9,3 +9,7 @@ compare_all_models(id, svfs, fitted_mods, ...)
 \description{
 function to compare variogram with all ML model fits (initial close up and total data range)
 }
+\examples{
+#> Source Code:
+compare_all_models
+}

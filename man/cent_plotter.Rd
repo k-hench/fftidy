@@ -9,3 +9,7 @@ cent_plotter(sf_centroid, individual.local.identifier, ...)
 \description{
 plot all centroids within a tibble-column of sf-objects
 }
+\examples{
+#> Source Code:
+cent_plotter
+}

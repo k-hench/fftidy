@@ -9,3 +9,7 @@ svf_to_tibble(svf, ci_level = 0.05)
 \description{
 convert a svf to a tibble
 }
+\examples{
+#> Source Code:
+svf_to_tibble
+}

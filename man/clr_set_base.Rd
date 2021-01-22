@@ -17,6 +17,7 @@ clr_set_base
 The color scheme is used to achieve a consistent usage of color throughout the project.
 }
 \examples{
+#> Source Code:
 clr_set_base
 clr_set_samples
 clr_set_light

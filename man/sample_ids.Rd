@@ -17,6 +17,7 @@ sample_ids
 The IDs are ordered according to their occurrence in the FFT data set.
 }
 \examples{
+#> Source Code:
 sample_ids
 }
 \keyword{datasets}

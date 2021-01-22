@@ -9,3 +9,7 @@ df_as_sf(x)
 \description{
 create the convex hull of a two column tibble with lat long columns (output as sf-obj)
 }
+\examples{
+#> Source Code:
+df_as_sf
+}

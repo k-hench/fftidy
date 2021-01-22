@@ -9,3 +9,7 @@ hull_plotter(sf, individual.local.identifier, ...)
 \description{
 plot all hulls within a tibble-column of sf-objects
 }
+\examples{
+#> Source Code:
+hull_plotter
+}

@@ -9,3 +9,7 @@ centroid_of_points(x)
 \description{
 combine several sf-points and create a joint centroid
 }
+\examples{
+#> Source Code:
+centroid_of_points
+}

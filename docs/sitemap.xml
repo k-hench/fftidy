@@ -4,6 +4,9 @@
     <loc>https://k-hench.github.io/fftidy//index.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/assign_overlaps_acc.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/back_convert_simmulation.html</loc>
   </url>
   <url>
@@ -145,6 +148,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/get_ci_univ.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/get_kriged_occurrence_maual.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/get_param_estimate.html</loc>
   </url>
   <url>
@@ -181,6 +187,9 @@
     <loc>https://k-hench.github.io/fftidy//reference/m2_to_ha.html</loc>
   </url>
   <url>
+    <loc>https://k-hench.github.io/fftidy//reference/merge_sf_columns.html</loc>
+  </url>
+  <url>
     <loc>https://k-hench.github.io/fftidy//reference/mod_tab.html</loc>
   </url>
   <url>
@@ -203,6 +212,9 @@
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/p_init_hull.html</loc>
+  </url>
+  <url>
+    <loc>https://k-hench.github.io/fftidy//reference/p_init_voronoi.html</loc>
   </url>
   <url>
     <loc>https://k-hench.github.io/fftidy//reference/pan_detail.html</loc>

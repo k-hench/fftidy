@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -129,6 +129,16 @@
 
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>get_pw_dists</span></div><div class='output co'>#&gt; function (data, ind1, ind2, ...) 
+#&gt; {
+#&gt;     tidyr::tibble(idx = data$idx, dist = st_distance(data[[ind1]], 
+#&gt;         data[[ind2]], by_element = T)) %&gt;% purrr::set_names(nm = c("idx", 
+#&gt;         str_c(ind1, "-", ind2)))
+#&gt; }
+#&gt; &lt;bytecode: 0x5591a7a82fa0&gt;
+#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

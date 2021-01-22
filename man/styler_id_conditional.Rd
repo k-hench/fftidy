@@ -9,3 +9,7 @@ styler_id_conditional(x)
 \description{
 Color table cell based on sample id
 }
+\examples{
+#> Source Code:
+styler_id_conditional
+}

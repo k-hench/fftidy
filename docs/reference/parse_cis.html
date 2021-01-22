@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -129,6 +129,19 @@
 
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>parse_cis</span></div><div class='output co'>#&gt; function (mod, ci_type) 
+#&gt; {
+#&gt;     ci_type_idx &lt;- c(low = 1, est = 2, high = 3)[[ci_type]]
+#&gt;     cis &lt;- summary(mod)$CI[, ci_type_idx]
+#&gt;     cis_units &lt;- str_remove_all(pattern = ".*\\(|\\)", names(cis)) %&gt;% 
+#&gt;         str_replace(., "square kilometers", "km^2") %&gt;% str_remove_all(., 
+#&gt;         "ours|inutes|ilo|eters|ays|ay|ect|res|ili|econds")
+#&gt;     cis %&gt;% set_names(cis_units)
+#&gt; }
+#&gt; &lt;bytecode: 0x5591a63a5518&gt;
+#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

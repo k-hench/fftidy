@@ -12,3 +12,7 @@ The function was altered from ctmm:::plot.svf()
 \details{
 It now returns the internally computed SVF
 }
+\examples{
+#> Source Code:
+plot_svf
+}

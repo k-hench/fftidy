@@ -9,3 +9,7 @@ parse_cis(mod, ci_type)
 \description{
 get the estimate units and round estimate to two digits
 }
+\examples{
+#> Source Code:
+parse_cis
+}

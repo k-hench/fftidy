@@ -14,6 +14,7 @@ clr_set_samples
 The de-saturated project color scheme
 }
 \examples{
+#> Source Code:
 clr_set_samples
 }
 \seealso{

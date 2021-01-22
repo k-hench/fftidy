@@ -4,6 +4,7 @@
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' wgs
 wgs <- "+proj=longlat +datum=WGS84 +no_defs"
 
@@ -12,6 +13,9 @@ wgs <- "+proj=longlat +datum=WGS84 +no_defs"
 #' \code{bb} set the bounding box framing Isla Barro Colorado
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' bb
 bb <- list(
   p1 = list(long = -79.9, lat = 9),
   p2 = list(long = -79.8, lat = 9.5)
@@ -22,27 +26,42 @@ bb <- list(
 #' \code{outer_hull} creates the outer hull of all the track within the data set.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' outer_hull
 outer_hull <- data_fft() %>%
   dplyr::select(location.long, location.lat) %>%
   df_as_sf()
 
 #' Get central point of area covered by tracks (as sf object)
 #' @export
+#' @examples
+#' #> Source Code:
+#' central_point_sf
 central_point_sf <- outer_hull %>% sf::st_centroid()
 
 #' Central point (non-sfversion)
 #' @export
+#' @examples
+#' #> Source Code:
+#' central_point
 central_point <- list(lat = central_point_sf[[2]],
                       long = central_point_sf[[1]])
 
 #' sf version of area covered by tracks
 #' @export
+#' @examples
+#' #> Source Code:
+#' outer_hull_sf
 outer_hull_sf <- outer_hull %>%
     sf::st_sfc()  %>%
     sf::`st_crs<-`(4326)
 
 #' Set Projection of Central Point of Area Covered by Tracks
 #' @export
+#' @examples
+#' #> Source Code:
+#' central_point_crs
 central_point_crs <- central_point_sf  %>%
     sf::st_sfc()  %>%
     sf::`st_crs<-`(4326)
@@ -50,6 +69,9 @@ central_point_crs <- central_point_sf  %>%
 #' Load Isla Barro Colorado Outline
 #' @export
 #' @examples
+#' #> Source Code:
+#' island
+#' #> -------------------
 #' ggplot()+ geom_sf(data = island)
 island <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_outline.shp") %>%
     sf::st_transform(crs = 4326)
@@ -57,6 +79,9 @@ island <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_outline.shp")
 #' Load Locations of Dipteryx
 #' @export
 #' @examples
+#' #> Source Code:
+#' dipteryx
+#' #> -------------------
 #' ggplot()+ geom_sf(data = fftidy::island) + geom_sf(data = fftidy::dipteryx, fill = "red" )
 dipteryx <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_Dipteryx_Patches.shp")
 
@@ -64,6 +89,9 @@ dipteryx <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_Dipteryx_Pa
 #' Load Gatun Lake Outline
 #' @export
 #' @examples
+#' #> Source Code:
+#' gatun
+#' #> -------------------
 #' ggplot()+ geom_sf(data = gatun)
 gatun <- sf::read_sf("resources/geo_reference_data/OSM_layers/gatun.shp") %>%
   sf::st_transform(crs = 4326)
@@ -71,6 +99,9 @@ gatun <- sf::read_sf("resources/geo_reference_data/OSM_layers/gatun.shp") %>%
 #' Load Panama Canal
 #' @export
 #' @examples
+#' #> Source Code:
+#' canal
+#' #> -------------------
 #' ggplot()+ geom_sf(data = canal)
 canal <- sf::read_sf("resources/geo_reference_data/OSM_layers/panama_canal.shp") %>%
   sf::st_transform(crs = 4326)
@@ -78,11 +109,17 @@ canal <- sf::read_sf("resources/geo_reference_data/OSM_layers/panama_canal.shp")
 #' Load clipped Panama Coastline
 #' @export
 #' @examples
+#' #> Source Code:
+#' pan_detail
+#' #> -------------------
 #' ggplot()+ geom_sf(data = pan_detail)
 pan_detail <- sf::read_sf("resources/geo_reference_data/GADM_layers/panama_clip.shp")
 
 #' Initialize empty Stars object
 #' @export
+#' @examples
+#' #> Source Code:
+#' sf_raster_empty
 sf_raster_empty <- function(sf, res = 50){
   bb <- st_bbox(sf)
   extbb <- extent(c(bb[[1]], bb[[3]], bb[[2]], bb[[4]]))
@@ -91,8 +128,11 @@ sf_raster_empty <- function(sf, res = 50){
 
 #' Convert FFT data to Stars object
 #' @export
+#' @examples
+#' #> Source Code:
+#' sample_as_stars
 sample_as_stars <- function(sample_id, res = 50, data_in, ...){
-  cli::cat_line(cli::rule(left = paste0("init star ", crayon::blue(sample_id))))
+  # cli::cat_line(cli::rule(left = paste0("init star ", crayon::blue(sample_id))))
 
   r_sample_empty <- data_slim_sf %>%
     filter(individual.local.identifier == sample_id) %>%
@@ -101,22 +141,22 @@ sample_as_stars <- function(sample_id, res = 50, data_in, ...){
 
   empty_stars <- r_sample_empty %>% stars:::st_as_stars()
 
-  cli::cat_line(paste0("data ", crayon::red("->"), " star"))
+  # cli::cat_line(paste0("data ", crayon::red("->"), " star"))
   pre_aggregate <- data_in %>%
     filter(individual.local.identifier == sample_id) %>%
     select(dist_to_noon_h, geometry) %>%
     stars::st_rasterize()
 
-  cli::cat_line("aggregate data ")
-  cli::cat_bullet(paste0(crayon::red("1"), " mean"))
+  # cli::cat_line("aggregate data ")
+  # cli::cat_bullet(paste0(crayon::red("1"), " mean"))
   sample_star1 <- pre_aggregate %>%
     stars:::aggregate.stars(by = empty_stars, FUN = mean, na.rm = TRUE) %>%
     st_as_sf()
-  cli::cat_bullet(paste0(crayon::red("2"), " sd"))
+  # cli::cat_bullet(paste0(crayon::red("2"), " sd"))
   sample_star2 <- pre_aggregate %>%
     stars:::aggregate.stars(by = empty_stars, FUN = sd, na.rm = TRUE) %>%
     st_as_sf()
-  cli::cat_bullet(paste0(crayon::red("3"), " n"))
+  # cli::cat_bullet(paste0(crayon::red("3"), " n"))
   sample_star3 <- pre_aggregate %>%
     stars:::aggregate.stars(by = empty_stars, FUN = count_no_na) %>%
     st_as_sf()
@@ -125,7 +165,7 @@ sample_as_stars <- function(sample_id, res = 50, data_in, ...){
   names(sample_star2)[[1]] <- "sd_h"
   names(sample_star3)[[1]] <- "n"
 
-  cli::cat_line("join aggregates")
+  # cli::cat_line("join aggregates")
   sample_star <- st_join(sample_star1, sample_star2) %>%
     st_join(., sample_star3) %>%
     mutate(sample_id = sample_id)
@@ -135,11 +175,17 @@ sample_as_stars <- function(sample_id, res = 50, data_in, ...){
 
 #' Count all non-NAs
 #' @export
+#' @examples
+#' #> Source Code:
+#' count_no_na
 count_no_na <- function(x){sum(!is.na(x))}
 
 #' Convert GPS tibble into sf object
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' tibble_to_sf
 tibble_to_sf <- function(tib, crs = 4326){
   tib %>%
     rename(long = "location.long",

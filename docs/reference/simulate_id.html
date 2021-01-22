@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -129,6 +129,26 @@
 
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>simulate_id</span></div><div class='output co'>#&gt; function (data, id_nr, ctmm_selcetion_type, fitted_tib) 
+#&gt; {
+#&gt;     cat(paste0(cli::rule(left = fftidy::crayon_set_clr(string = sample_ids[[id_nr]], 
+#&gt;         clr = clr_set_base[[sample_ids[[id_nr]]]])), "\n"))
+#&gt;     SIMd &lt;- ctmm::simulate(object = fitted_tib$data[[ctmm_selcetion_type]]$best_model[[id_nr]], 
+#&gt;         data = data[[id_nr]])
+#&gt;     SIMg &lt;- ctmm::simulate(object = fitted_tib$data[[ctmm_selcetion_type]]$best_model[[id_nr]], 
+#&gt;         t = data[[id_nr]]$timestamp %&gt;% as.numeric())
+#&gt;     sim_d_sf &lt;- SIMd %&gt;% sim_to_sf(id_nr = id_nr, type = "data_informed")
+#&gt;     sim_g_sf &lt;- SIMg %&gt;% sim_to_sf(id_nr = id_nr, type = "gaussian")
+#&gt;     data_sf &lt;- data[[id_nr]] %&gt;% as_tibble() %&gt;% select(timestamp, 
+#&gt;         x, y) %&gt;% rename(t = "timestamp") %&gt;% sim_to_sf(id_nr = id_nr, 
+#&gt;         type = "data")
+#&gt;     tibble(id = sample_ids[[id_nr]], sim_d = list(SIMd), sim_g = list(SIMg), 
+#&gt;         sd_sf = list(sim_d_sf), sg_sf = list(sim_g_sf), data_sf = list(data_sf))
+#&gt; }
+#&gt; &lt;bytecode: 0x5591a3cebc00&gt;
+#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

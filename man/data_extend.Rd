@@ -13,8 +13,8 @@ data_extend(data)
 \code{extend_data} computes additional simple metrics from the raw capuchin tracking data
 }
 \examples{
-ext_data <- data_fft() \%>\% data_extend()
-head(ext_data)
+#> Source Code:
+data_extend
 }
 \seealso{
 [fftidy::extend_data()] a less saturated version of the color scheme.

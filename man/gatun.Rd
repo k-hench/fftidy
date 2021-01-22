@@ -14,6 +14,9 @@ gatun
 Load Gatun Lake Outline
 }
 \examples{
+#> Source Code:
+gatun
+#> -------------------
 ggplot()+ geom_sf(data = gatun)
 }
 \keyword{datasets}

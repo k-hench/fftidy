@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -191,7 +191,17 @@ https://github.com/tidyverse/ggplot2/issues/1399</p>
   <span class='fu'>scale_x_continuous</span>(<span class='kw'>expand</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>0</span>),<span class='kw'>limits</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>14</span>))+
   <span class='fu'>scale_fill_manual</span>(<span class='kw'>values</span> <span class='kw'>=</span> <span class='no'>clr</span>)+
   <span class='fu'>scale_color_manual</span>(<span class='kw'>values</span> <span class='kw'>=</span> <span class='no'>clr</span>)+
-  <span class='fu'>theme_gray</span>()+<span class='fu'>theme</span>(<span class='kw'>legend.position</span> <span class='kw'>=</span> <span class='st'>'bottom'</span>)</div><div class='output co'>#&gt; <span class='error'>Error in fortify(data): object 'grob_list' not found</span></div></pre>
+  <span class='fu'>theme_gray</span>()+<span class='fu'>theme</span>(<span class='kw'>legend.position</span> <span class='kw'>=</span> <span class='st'>'bottom'</span>)</div><div class='output co'>#&gt; <span class='error'>Error in fortify(data): object 'grob_list' not found</span></div><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>geom_hypo_grob</span></div><div class='output co'>#&gt; function (mapping = NULL, data = NULL, stat = "identity", position = "identity", 
+#&gt;     na.rm = FALSE, show.legend = NA, inherit.aes = FALSE, ...) 
+#&gt; {
+#&gt;     layer(geom = hypo_geom_grob_custom, mapping = mapping, data = data, 
+#&gt;         stat = stat, position = position, show.legend = show.legend, 
+#&gt;         inherit.aes = inherit.aes, params = list(na.rm = na.rm, 
+#&gt;             ...))
+#&gt; }
+#&gt; &lt;bytecode: 0x5591a73dc410&gt;
+#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

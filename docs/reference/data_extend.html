@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -141,7 +141,38 @@
     <div class='dont-index'><p>[fftidy::extend_data()] a less saturated version of the color scheme.</p></div>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>ext_data</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='data_fft.html'>data_fft</a></span>() <span class='kw'>%&gt;%</span> <span class='fu'>data_extend</span>()</div><div class='output co'>#&gt; <span class='error'>Error: 'data/fft_capuchins_movebank_download.tsv.gz' does not exist in current working directory ('/home/kluk/work/crofoot_lab/fftidy/docs/reference').</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>ext_data</span>)</div><div class='output co'>#&gt; <span class='error'>Error in h(simpleError(msg, call)): error in evaluating the argument 'x' in selecting a method for function 'head': object 'ext_data' not found</span></div></pre>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>data_extend</span></div><div class='output co'>#&gt; function (data) 
+#&gt; {
+#&gt;     data %&gt;% dplyr::mutate(date = glue::glue("{lubridate::year(timestamp)}-{lubridate::month(timestamp)}-{lubridate::day(timestamp)}")) %&gt;% 
+#&gt;         dplyr::left_join(readr::read_tsv("data/fieldtrip_days.tsv.gz")) %&gt;% 
+#&gt;         dplyr::mutate(week = day%/%7, wday = (day - 1)%%7 + 1, 
+#&gt;             clean_week = lubridate::week(timestamp), consecutive_clean_week = ifelse(clean_week &lt; 
+#&gt;                 40, 53 + clean_week, clean_week), clean_wday = lubridate::wday(timestamp), 
+#&gt;             wtim = lubridate::ymd_hms(str_c("2017-12-", clean_wday, 
+#&gt;                 " ", lubridate::hour(timestamp), ":", lubridate::minute(timestamp), 
+#&gt;                 ":", lubridate::second(timestamp))), wtim_num = as.numeric(wtim), 
+#&gt;             dtim = dtim(timestamp_pan), date = lubridate::as_date(str_c(lubridate::year(timestamp_pan), 
+#&gt;                 "-", lubridate::month(timestamp_pan), "-", lubridate::day(timestamp_pan))), 
+#&gt;             sunrise = suncalc::getSunlightTimes(date = date, 
+#&gt;                 lat = central_point$lat, lon = central_point$long, 
+#&gt;                 tz = "EST")$sunrise, sunset = suncalc::getSunlightTimes(date = date, 
+#&gt;                 lat = central_point$lat, lon = central_point$long, 
+#&gt;                 tz = "EST")$sunset, rel_sun_time = timestamp_pan - 
+#&gt;                 sunrise, rel_sun_h = as.numeric(rel_sun_time)/3600, 
+#&gt;             day_part = c("0:night", "1:morning", "2:midday", 
+#&gt;                 "3:afternoon", "4:evening")[((as.numeric(rel_sun_time)/3600)%/%3) + 
+#&gt;                 2], min_prep = (lubridate::minute(timestamp)%/%5) * 
+#&gt;                 5, bin_5_min = lubridate::ymd_hms(str_c(lubridate::year(timestamp), 
+#&gt;                 "-", lubridate::month(timestamp), "-", lubridate::day(timestamp), 
+#&gt;                 " ", lubridate::hour(timestamp), ":", str_pad(as.character(min_prep), 
+#&gt;                   width = 2, pad = 0), ":00")), sun_noon = suncalc::getSunlightTimes(date = date, 
+#&gt;                 lat = central_point$lat, lon = central_point$long, 
+#&gt;                 tz = "EST")$solarNoon, dist_to_noon_h = difftime(timestamp_pan, 
+#&gt;                 sun_noon, units = "hours") %&gt;% abs() %&gt;% as.numeric())
+#&gt; }
+#&gt; &lt;bytecode: 0x5591a2664a40&gt;
+#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

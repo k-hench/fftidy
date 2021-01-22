@@ -3,6 +3,9 @@
 #' used in simulate_id()
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' sim_to_sf
 sim_to_sf <- function(SIM, id_nr, type){
   SIM %>%
     as_tibble() %>%
@@ -15,6 +18,9 @@ sim_to_sf <- function(SIM, id_nr, type){
 #' Simulate movement track for a particular Sample
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' simulate_id
 simulate_id <- function(data, id_nr, ctmm_selcetion_type, fitted_tib){
   cat(paste0(cli::rule(left = fftidy::crayon_set_clr(string = sample_ids[[id_nr]],clr = clr_set_base[[sample_ids[[id_nr]]]])),"\n"))
   # run the data informed simulation based on the best model fit
@@ -52,6 +58,9 @@ simulate_id <- function(data, id_nr, ctmm_selcetion_type, fitted_tib){
 #' Convert Simmulation results back to data format
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' back_convert_simmulation
 back_convert_simmulation <- function(data){
 
   data_date_crs <- data %>%

@@ -14,6 +14,7 @@ clr_set_alpha
 The transparent project color scheme
 }
 \examples{
+#> Source Code:
 clr_set_alpha
 }
 \seealso{

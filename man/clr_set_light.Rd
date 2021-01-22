@@ -14,6 +14,7 @@ clr_set_light
 The light project color scheme
 }
 \examples{
+#> Source Code:
 clr_set_light
 }
 \seealso{

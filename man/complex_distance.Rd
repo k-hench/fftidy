@@ -9,3 +9,7 @@ complex_distance(data, ind1, ind2, ...)
 \description{
 Compute pair wise distances within time bins based on complex representation
 }
+\examples{
+#> Source Code:
+complex_distance
+}

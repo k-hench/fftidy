@@ -6,6 +6,7 @@
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' sample_ids
 sample_ids <- c("Bob 4661", "Da Vinci 5764", "Ibeth 4654",
                 "Martinelli 5763", "Mimi 4660", "Norah 4655",
@@ -19,6 +20,7 @@ sample_ids <- c("Bob 4661", "Da Vinci 5764", "Ibeth 4654",
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' fft_plot_size
 fft_plot_size <- .2
 
@@ -30,6 +32,7 @@ fft_plot_size <- .2
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' fft_lwd
 fft_lwd <- .25
 
@@ -41,6 +44,7 @@ fft_lwd <- .25
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' fft_text_size
 fft_text_size <- 7
 
@@ -52,6 +56,7 @@ fft_text_size <- 7
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' fft_text_size_small
 fft_text_size_small <- 6
 
@@ -63,6 +68,7 @@ fft_text_size_small <- 6
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' fft_f_width
 fft_f_width <- 7
 
@@ -74,6 +80,7 @@ fft_f_width <- 7
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' fft_f_width_half
 fft_f_width_half <- 3.43
 
@@ -87,6 +94,9 @@ fft_f_width_half <- 3.43
 #'
 #' @export
 #' @examples
+#' #> Source Code:
+#' fft_case
+#' #> -------------------
 #' fft_case(letters[1:5])
 #' fft_case(LETTERS[1:5])
 fft_case <- function(x){
@@ -104,6 +114,7 @@ fft_case <- function(x){
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' fft_case_inv(letters[1:5])
 #' fft_case_inv(LETTERS[1:5])
 fft_case_inv <- function(x){
@@ -115,6 +126,9 @@ fft_case_inv <- function(x){
 #' \code{bic_proj} holds the project UTM projection.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' bic_proj
 bic_proj <- "+proj=utm +zone=17 +north +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"
 
 #' Highlighter Color
@@ -122,6 +136,9 @@ bic_proj <- "+proj=utm +zone=17 +north +datum=WGS84 +units=m +no_defs +ellps=WGS
 #' \code{clr_accent} defines a highlighter color.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' clr_accent
 clr_accent <- "#ff8b3e"
 
 #' Water Color
@@ -129,6 +146,9 @@ clr_accent <- "#ff8b3e"
 #' \code{clr_water} defines a water color for maps.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' clr_water
 clr_water <- "#E5E5E5" %>% prismatic::clr_darken(shift = .15)
 
 #' Abbreviations of sample IDs
@@ -136,6 +156,9 @@ clr_water <- "#E5E5E5" %>% prismatic::clr_darken(shift = .15)
 #' \code{sample_ids_short} contains a two character sample ID abbreviation.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' sample_ids_short
 sample_ids_short <- sample_ids %>% set_names(nm = str_sub(sample_ids,1,2))
 
 #' Reference vector short to long sample ID
@@ -143,6 +166,9 @@ sample_ids_short <- sample_ids %>% set_names(nm = str_sub(sample_ids,1,2))
 #' \code{samples_short} contains a named vector of the sample IDs.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' samples_short
 samples_short <- sample_ids %>%
   set_names(nm = str_sub(sample_ids,1,2))
 
@@ -151,6 +177,9 @@ samples_short <- sample_ids %>%
 #' \code{neighbor_ids} contains all five character neighbor pair_ids.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' neighbor_ids
 neighbor_ids <- str_c(str_sub(neighboring_samples$west,1,2),
                       "-",
                       str_sub(neighboring_samples$east,1,2))
@@ -160,6 +189,9 @@ neighbor_ids <- str_c(str_sub(neighboring_samples$west,1,2),
 #' \code{guide_use} contains a constructor for ggplot guides.
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' guide_use
 guide_use <- function(...){
   guide_colorbar(title = "Dipteryx Density",
                  title.position = "top",

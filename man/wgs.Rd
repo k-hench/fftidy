@@ -14,6 +14,7 @@ wgs
 \code{wgs} contains the proj string for GPS data
 }
 \examples{
+#> Source Code:
 wgs
 }
 \keyword{datasets}

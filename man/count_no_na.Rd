@@ -9,3 +9,7 @@ count_no_na(x)
 \description{
 Count all non-NAs
 }
+\examples{
+#> Source Code:
+count_no_na
+}

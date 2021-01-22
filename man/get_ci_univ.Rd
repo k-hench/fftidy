@@ -9,3 +9,7 @@ get_ci_univ(mod, ci_idx, ci_type = "est", ...)
 \description{
 universal function (works for both OU & OUF)
 }
+\examples{
+#> Source Code:
+get_ci_univ
+}

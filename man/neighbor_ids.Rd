@@ -13,4 +13,8 @@ neighbor_ids
 \description{
 \code{neighbor_ids} contains all five character neighbor pair_ids.
 }
+\examples{
+#> Source Code:
+neighbor_ids
+}
 \keyword{datasets}

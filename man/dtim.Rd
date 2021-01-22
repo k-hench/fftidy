@@ -9,3 +9,7 @@ dtim(x)
 \description{
 extract the time of the day from a date-time (as numeric seconds)
 }
+\examples{
+#> Source Code:
+dtim
+}

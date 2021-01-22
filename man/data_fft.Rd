@@ -16,8 +16,8 @@ data_fft(data_path = "data/fft_capuchins_movebank_download.tsv.gz")
 By default, the function expects to be run from the FFT project folder .
 }
 \examples{
-data <- data_fft()
-head(data)
+#> Source Code:
+data_fft
 }
 \seealso{
 [fftidy::extend_data()] a less saturated version of the color scheme.

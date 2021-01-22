@@ -13,4 +13,8 @@ central_point_sf
 \description{
 Get central point of area covered by tracks (as sf object)
 }
+\examples{
+#> Source Code:
+central_point_sf
+}
 \keyword{datasets}

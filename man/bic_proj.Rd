@@ -13,4 +13,8 @@ bic_proj
 \description{
 \code{bic_proj} holds the project UTM projection.
 }
+\examples{
+#> Source Code:
+bic_proj
+}
 \keyword{datasets}

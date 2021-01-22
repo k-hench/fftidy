@@ -9,3 +9,7 @@ display_sample_clr()
 \description{
 Display sample colors
 }
+\examples{
+#> Source Code:
+display_sample_clr
+}

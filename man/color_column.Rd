@@ -9,3 +9,7 @@ color_column(name)
 \description{
 Color entire column based on sample_id
 }
+\examples{
+#> Source Code:
+color_column
+}

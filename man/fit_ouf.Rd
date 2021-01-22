@@ -9,3 +9,7 @@ fit_ouf(svf, sigma, tauH, tauF)
 \description{
 function to create and fit a Ornstein-Uhlenbeck-F model to a semi-variance function
 }
+\examples{
+#> Source Code:
+fit_ouf
+}

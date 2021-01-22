@@ -9,3 +9,7 @@ get_pw_dists(data, ind1, ind2, ...)
 \description{
 given a table with synchronous positions, compute all distances for a specific column-pair (sample-pair)
 }
+\examples{
+#> Source Code:
+get_pw_dists
+}

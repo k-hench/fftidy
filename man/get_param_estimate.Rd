@@ -9,3 +9,7 @@ get_param_estimate(mod)
 \description{
 Get the parameter estimates from a ctmm fitted model
 }
+\examples{
+#> Source Code:
+get_param_estimate
+}

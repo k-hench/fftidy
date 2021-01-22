@@ -9,3 +9,7 @@ get_akde(data, fitted_mls, id, ...)
 \description{
 function for automatizing autocorrelated kernel density estimation
 }
+\examples{
+#> Source Code:
+get_akde
+}

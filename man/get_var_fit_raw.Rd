@@ -9,3 +9,7 @@ get_var_fit_raw(vario, model = "ou")
 \description{
 Extract a fitted parameter from a ctmm object
 }
+\examples{
+#> Source Code:
+get_var_fit_raw
+}

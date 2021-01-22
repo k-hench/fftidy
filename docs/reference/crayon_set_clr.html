@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90019</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90020</span>
       </span>
     </div>
 
@@ -129,6 +129,16 @@
 
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
+<span class='no'>crayon_set_clr</span></div><div class='output co'>#&gt; function (string, clr, ...) 
+#&gt; {
+#&gt;     (crayon::combine_styles(crayon::make_style(clr, bg = TRUE), 
+#&gt;         crayon::make_style(prismatic::clr_darken(clr, shift = 0.7))))(string, 
+#&gt;         ...)
+#&gt; }
+#&gt; &lt;bytecode: 0x5591a6b23070&gt;
+#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

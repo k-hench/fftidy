@@ -3,6 +3,9 @@
 #' Groups neighboring each other (possible encouters)
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' neighboring_samples
 neighboring_samples <- tribble(
   ~year, ~west, ~east,
   2015, "Olga 4657", "Mimi 4660",
@@ -22,6 +25,9 @@ neighboring_samples <- tribble(
 #' Compute pair wise distances within time bins based on complex representation
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' complex_distance
 complex_distance <- function(data, ind1, ind2, ...){
 
   d1 <- data$data[[which(data$individual.local.identifier == ind1)]] %>%

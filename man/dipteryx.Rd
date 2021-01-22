@@ -14,6 +14,9 @@ dipteryx
 Load Locations of Dipteryx
 }
 \examples{
+#> Source Code:
+dipteryx
+#> -------------------
 ggplot()+ geom_sf(data = fftidy::island) + geom_sf(data = fftidy::dipteryx, fill = "red" )
 }
 \keyword{datasets}

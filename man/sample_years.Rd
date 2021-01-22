@@ -14,6 +14,7 @@ sample_years
 \code{sample_years} contains the field season for each sample.
 }
 \examples{
+#> Source Code:
 sample_years
 }
 \keyword{datasets}

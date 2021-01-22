@@ -13,4 +13,8 @@ clr_neighbor_alpha
 \description{
 \code{clr_neighbor_alpha} contains a semi-transparent version of the project color scheme for sample pairs
 }
+\examples{
+#> Source Code:
+clr_neighbor_alpha
+}
 \keyword{datasets}

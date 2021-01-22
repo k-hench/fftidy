@@ -13,4 +13,8 @@ table_theme
 \description{
 Basic table theme
 }
+\examples{
+#> Source Code:
+table_theme
+}
 \keyword{datasets}

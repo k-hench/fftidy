@@ -17,6 +17,7 @@ fft_text_size
 This sets the default font size of text thoughout the figures.
 }
 \examples{
+#> Source Code:
 fft_text_size
 }
 \keyword{datasets}

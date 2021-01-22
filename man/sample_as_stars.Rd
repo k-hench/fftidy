@@ -9,3 +9,7 @@ sample_as_stars(sample_id, res = 50, data_in, ...)
 \description{
 Convert FFT data to Stars object
 }
+\examples{
+#> Source Code:
+sample_as_stars
+}

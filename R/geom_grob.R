@@ -7,6 +7,9 @@
 #' Only the parameters height, width and angle have been added.
 #'
 #' @seealso \code{\link{geom_hypo_grob}}
+#' @examples
+#' #> Source Code:
+#' hypo_geom_grob_custom
 hypo_geom_grob_custom <- ggproto(
   "hypo_geom_grob_custom",
   Geom,
@@ -79,6 +82,9 @@ hypo_geom_grob_custom <- ggproto(
 #'   scale_color_manual(values = clr)+
 #'   theme_gray()+theme(legend.position = 'bottom')
 #' @export
+#' @examples
+#' #> Source Code:
+#' geom_hypo_grob
 geom_hypo_grob <- function(mapping = NULL,
                            data = NULL,
                            stat = "identity",

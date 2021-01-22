@@ -4,6 +4,7 @@
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' sample_years
 sample_years <- c(
   `Bob 4661` = 2017,
@@ -28,6 +29,7 @@ sample_years <- c(
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' clr_set_base
 #' clr_set_samples
 #' clr_set_light
@@ -44,6 +46,7 @@ clr_set_base <- RColorBrewer::brewer.pal(8, "Set1")[c(1:3,5,4,6:8)] %>% prismati
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' clr_set_samples
 clr_set_samples <- clr_set_base %>% prismatic::clr_desaturate(shift = .2) %>% purrr::set_names(nm = sample_ids)
 
@@ -55,6 +58,7 @@ clr_set_samples <- clr_set_base %>% prismatic::clr_desaturate(shift = .2) %>% pu
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' clr_set_light
 clr_set_light <- clr_set_samples %>% prismatic::clr_lighten(shift = .6) %>% purrr::set_names(nm = sample_ids)
 
@@ -66,6 +70,7 @@ clr_set_light <- clr_set_samples %>% prismatic::clr_lighten(shift = .6) %>% purr
 #'
 #' @export
 #' @examples
+#' #> Source Code:
 #' clr_set_alpha
 clr_set_alpha <- clr_set_samples %>% prismatic::clr_alpha(alpha = .15) %>% purrr::set_names(nm = sample_ids)
 
@@ -73,6 +78,9 @@ clr_set_alpha <- clr_set_samples %>% prismatic::clr_alpha(alpha = .15) %>% purrr
 #' Style text with crayon
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' crayon_set_clr
 crayon_set_clr <- function(string, clr,...){
   crayon::combine_styles(crayon::make_style(clr, bg = TRUE),
                          crayon::make_style(prismatic::clr_darken(clr,
@@ -82,6 +90,9 @@ crayon_set_clr <- function(string, clr,...){
 #' Display sample colors
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' display_sample_clr
 display_sample_clr <- function(){
   clr_set_base %>%
     names() %>%
@@ -95,6 +106,9 @@ display_sample_clr <- function(){
 #' \code{clr_neighbor} contains the base colors of the project color scheme for sample pairs
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' clr_neighbor
 clr_neighbor <- rcartocolor::carto_pal(10, name = "Prism") %>%
   prismatic::color() %>%
   set_names(nm = neighbor_ids)
@@ -104,6 +118,9 @@ clr_neighbor <- rcartocolor::carto_pal(10, name = "Prism") %>%
 #' \code{clr_neighbor_alpha} contains a semi-transparent version of the project color scheme for sample pairs
 #'
 #' @export
+#' @examples
+#' #> Source Code:
+#' clr_neighbor_alpha
 clr_neighbor_alpha <- clr_neighbor %>%
   clr_alpha() %>%
   set_names(nm = names(clr_neighbor))

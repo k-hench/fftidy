@@ -10,8 +10,8 @@
 #'
 #' @export
 #' @examples
-#' data <- data_fft()
-#' head(data)
+#' #> Source Code:
+#' data_fft
 data_fft <- function(data_path = "data/fft_capuchins_movebank_download.tsv.gz"){
   vroom::vroom(data_path, delim = "\t") %>%
     dplyr::mutate(timestamp = timestamp %>% lubridate::force_tz("UTC"),

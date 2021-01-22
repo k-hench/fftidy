@@ -13,4 +13,8 @@ neighboring_samples
 \description{
 Groups neighboring each other (possible encouters)
 }
+\examples{
+#> Source Code:
+neighboring_samples
+}
 \keyword{datasets}

@@ -9,3 +9,7 @@ table_total(x)
 \description{
 Total a Column and ignore NAs
 }
+\examples{
+#> Source Code:
+table_total
+}

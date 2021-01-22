@@ -9,3 +9,7 @@ hull_tib(x)
 \description{
 create the convex hull of a two column tibble with lat long columns (output as tibble)
 }
+\examples{
+#> Source Code:
+hull_tib
+}

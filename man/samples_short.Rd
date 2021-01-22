@@ -13,4 +13,8 @@ samples_short
 \description{
 \code{samples_short} contains a named vector of the sample IDs.
 }
+\examples{
+#> Source Code:
+samples_short
+}
 \keyword{datasets}

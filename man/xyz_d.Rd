@@ -9,3 +9,7 @@ xyz_d(xyz)
 \description{
 compute delta XYZ of accelerometer data
 }
+\examples{
+#> Source Code:
+xyz_d
+}

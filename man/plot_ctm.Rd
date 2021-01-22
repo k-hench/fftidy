@@ -9,3 +9,7 @@ plot_ctm(mod, svf, ...)
 \description{
 plot two model (original guess and modified) in context of variogram (in right colors)
 }
+\examples{
+#> Source Code:
+plot_ctm
+}

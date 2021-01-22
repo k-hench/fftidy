@@ -14,6 +14,9 @@ pan_detail
 Load clipped Panama Coastline
 }
 \examples{
+#> Source Code:
+pan_detail
+#> -------------------
 ggplot()+ geom_sf(data = pan_detail)
 }
 \keyword{datasets}

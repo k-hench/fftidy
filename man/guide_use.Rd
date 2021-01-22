@@ -9,3 +9,7 @@ guide_use(...)
 \description{
 \code{guide_use} contains a constructor for ggplot guides.
 }
+\examples{
+#> Source Code:
+guide_use
+}

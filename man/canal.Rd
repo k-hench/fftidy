@@ -14,6 +14,9 @@ canal
 Load Panama Canal
 }
 \examples{
+#> Source Code:
+canal
+#> -------------------
 ggplot()+ geom_sf(data = canal)
 }
 \keyword{datasets}
