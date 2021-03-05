@@ -2,7 +2,7 @@ pandoc: 2.11.0.4
 pkgdown: 1.5.1
 pkgdown_sha: ~
 articles: []
-last_built: 2021-03-05T16:29Z
+last_built: 2021-03-05T16:37Z
 urls:
   reference: https://k-hench.github.io/fftidy//reference
   article: https://k-hench.github.io/fftidy//articles

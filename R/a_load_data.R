@@ -9,7 +9,7 @@
 #' @seealso [fftidy::extend_data()] a less saturated version of the color scheme.
 #'
 #' @export
-data_fft <- function(data_path = "data/fft_capuchins_movebank_download_head.tsv.gz"){
+data_fft <- function(data_path = "data/fft_capuchins_movebank_download.tsv.gz"){
   vroom::vroom(data_path, delim = "\t") %>%
     dplyr::mutate(timestamp = timestamp %>% lubridate::force_tz("UTC"),
          timestamp_pan = timestamp %>% lubridate::with_tz("EST"),
