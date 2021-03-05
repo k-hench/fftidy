@@ -4,7 +4,7 @@
 \alias{data_fft}
 \title{Load FFT tracking data}
 \usage{
-data_fft(data_path = "data/fft_capuchins_movebank_download.tsv.gz")
+data_fft(data_path = "data/fft_capuchins_movebank_download_head.tsv.gz")
 }
 \arguments{
 \item{data_path}{the path to the data file}

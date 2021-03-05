@@ -47,27 +47,23 @@ central_point_crs <- central_point_sf  %>%
 
 #' Load Isla Barro Colorado Outline
 #' @export
-island <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_outline.shp") %>%
-    sf::st_transform(crs = 4326)
+island <- readRDS("data/island.Rds")
 
 #' Load Locations of Dipteryx
 #' @export
-dipteryx <- sf::read_sf("resources/geo_reference_data/BCI Layers/BCI_Dipteryx_Patches.shp")
-
+dipteryx <- readRDS("data/dipteryx.Rds")
 
 #' Load Gatun Lake Outline
 #' @export
-gatun <- sf::read_sf("resources/geo_reference_data/OSM_layers/gatun.shp") %>%
-  sf::st_transform(crs = 4326)
+gatun <- readRDS("data/gatun.Rds")
 
 #' Load Panama Canal
 #' @export
-canal <- sf::read_sf("resources/geo_reference_data/OSM_layers/panama_canal.shp") %>%
-  sf::st_transform(crs = 4326)
+canal <- readRDS("data/canal.Rds")
 
 #' Load clipped Panama Coastline
 #' @export
-pan_detail <- sf::read_sf("resources/geo_reference_data/GADM_layers/panama_clip.shp")
+pan_detail <- readRDS("data/pan_detail.Rds")
 
 #' Initialize empty Stars object
 #' @export
