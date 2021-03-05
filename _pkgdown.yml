@@ -134,7 +134,7 @@ reference:
     desc: >
       Functions to help with the {ctmm} based simulation of movement tracks.
     contents:
-      - back_convert_simmulation
+      - back_convert_simulation
       - sim_to_sf
       - simulate_id
   - title: "accelerometer data related"

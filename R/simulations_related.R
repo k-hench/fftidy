@@ -61,7 +61,7 @@ simulate_id <- function(data, id_nr, ctmm_selcetion_type, fitted_tib){
 #' @examples
 #' #> Source Code:
 #' back_convert_simmulation
-back_convert_simmulation <- function(data){
+back_convert_simulation <- function(data){
 
   data_date_crs <- data %>%
     st_transform(crs = bic_proj) %>%
