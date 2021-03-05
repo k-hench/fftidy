@@ -1,25 +1,16 @@
 #' get XYZ from accelerometer data
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' xyz_get
 xyz_get <- function(xyz, idx){ xyz[seq(from = idx, to = length(xyz), by = 3)] }
 
 #' compute delta XYZ of accelerometer data
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' xyz_d
 xyz_d <- function(xyz){ xyz - mean(xyz)}
 
 #' Pivot encointer table to long format
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' encounter_long
 encounter_long <- function(data, sample_id_n = "sample_id_e"){
   data %>%
     mutate(sample_1 = samples_short[str_sub(pair_id,1,2)],
@@ -33,9 +24,6 @@ encounter_long <- function(data, sample_id_n = "sample_id_e"){
 #' Determine if timepoint x is on any overlap
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' on_any_overlap
 on_any_overlap <- function(x){
   ymd_hms(x) %>%
     map2_lgl(.x = overlap_id_data$overlap_start,
@@ -47,9 +35,6 @@ on_any_overlap <- function(x){
 #' Assign the overlap ID of a timestamp
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' assign_overlaps_acc
 assign_overlaps_acc <- function(sample){
   cat(str_c(cli::rule(left = crayon_set_clr(sample,clr_set_base[sample])),"\n"))
 

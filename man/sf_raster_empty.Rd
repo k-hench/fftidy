@@ -9,7 +9,3 @@ sf_raster_empty(sf, res = 50)
 \description{
 Initialize empty Stars object
 }
-\examples{
-#> Source Code:
-sf_raster_empty
-}

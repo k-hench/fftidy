@@ -9,7 +9,3 @@ encounter_long(data, sample_id_n = "sample_id_e")
 \description{
 Pivot encointer table to long format
 }
-\examples{
-#> Source Code:
-encounter_long
-}

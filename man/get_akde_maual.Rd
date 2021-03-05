@@ -9,7 +9,3 @@ get_akde_maual(data, fitted_mls, id, ...)
 \description{
 Load ctmm based AKDEs by Sample ID
 }
-\examples{
-#> Source Code:
-get_akde_maual
-}

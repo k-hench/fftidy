@@ -9,7 +9,3 @@ assign_overlaps_acc(sample)
 \description{
 Assign the overlap ID of a timestamp
 }
-\examples{
-#> Source Code:
-assign_overlaps_acc
-}

@@ -16,8 +16,4 @@ fft_text_size_small
 \details{
 This sets the small font size of text for the figures (legends).
 }
-\examples{
-#> Source Code:
-fft_text_size_small
-}
 \keyword{datasets}

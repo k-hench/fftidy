@@ -9,7 +9,3 @@ crp(poly, bbox = bb)
 \description{
 crop a sf obj to the project bounding box
 }
-\examples{
-#> Source Code:
-crp
-}

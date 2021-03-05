@@ -9,7 +9,3 @@ get_kriged_occurrence_maual(data, fitted_mls, id, ...)
 \description{
 Load ctmm based kriged occurrences by Sample ID
 }
-\examples{
-#> Source Code:
-get_kriged_occurrence_maual
-}

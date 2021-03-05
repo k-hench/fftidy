@@ -13,8 +13,4 @@ outer_hull_sf
 \description{
 sf version of area covered by tracks
 }
-\examples{
-#> Source Code:
-outer_hull_sf
-}
 \keyword{datasets}

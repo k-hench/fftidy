@@ -13,8 +13,4 @@ sample_ids_short
 \description{
 \code{sample_ids_short} contains a two character sample ID abbreviation.
 }
-\examples{
-#> Source Code:
-sample_ids_short
-}
 \keyword{datasets}

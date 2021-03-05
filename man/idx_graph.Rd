@@ -9,7 +9,3 @@ idx_graph(g, idx)
 \description{
 convert an igraph-graph into a tidygraph tbl_graph, annotate with the idx (later to become the time-bin), and compute tdiverse node-centralities
 }
-\examples{
-#> Source Code:
-idx_graph
-}

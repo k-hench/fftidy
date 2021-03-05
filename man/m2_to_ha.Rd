@@ -9,7 +9,3 @@ m2_to_ha(x)
 \description{
 convert SI units (m2 -> ha)
 }
-\examples{
-#> Source Code:
-m2_to_ha
-}

@@ -9,7 +9,3 @@ get_ci_ouf(mod, ci_idx, ci_type = "est", ...)
 \description{
 function for OUF specific parameters (tau2)
 }
-\examples{
-#> Source Code:
-get_ci_ouf
-}

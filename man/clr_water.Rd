@@ -13,8 +13,4 @@ clr_water
 \description{
 \code{clr_water} defines a water color for maps.
 }
-\examples{
-#> Source Code:
-clr_water
-}
 \keyword{datasets}

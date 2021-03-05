@@ -9,7 +9,3 @@ p_init(season)
 \description{
 initialize a field-trip specific base-plot
 }
-\examples{
-#> Source Code:
-p_init
-}

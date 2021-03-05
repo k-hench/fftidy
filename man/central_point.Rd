@@ -13,8 +13,4 @@ central_point
 \description{
 Central point (non-sfversion)
 }
-\examples{
-#> Source Code:
-central_point
-}
 \keyword{datasets}

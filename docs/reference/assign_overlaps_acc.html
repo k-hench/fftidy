@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90021</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90022</span>
       </span>
     </div>
 
@@ -129,27 +129,6 @@
 
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
-<span class='no'>assign_overlaps_acc</span></div><div class='output co'>#&gt; function (sample) 
-#&gt; {
-#&gt;     cat(str_c(cli::rule(left = crayon_set_clr(sample, clr_set_base[sample])), 
-#&gt;         "\n"))
-#&gt;     short &lt;- str_sub(sample, 1, 2)
-#&gt;     data_accel_slim %&gt;% filter(sample_id == sample) %&gt;% fuzzy_left_join(y = encounter_id_data %&gt;% 
-#&gt;         filter(grepl(short, pair_id_e)) %&gt;% rename(pair_id = "pair_id_e") %&gt;% 
-#&gt;         encounter_long() %&gt;% filter(sample_id_e == sample), by = c(timestamp2 = "pre_start", 
-#&gt;         timestamp2 = "post_end", sample_id = "sample_id_e"), 
-#&gt;         match_fun = list(`&gt;=`, `&lt;=`, `==`)) %&gt;% fuzzy_left_join(y = overlap_id_data %&gt;% 
-#&gt;         filter(grepl(short, pair_id_o)) %&gt;% rename(pair_id = "pair_id_o") %&gt;% 
-#&gt;         encounter_long(sample_id_n = "sample_id_o") %&gt;% filter(sample_id_o == 
-#&gt;         sample), by = c(timestamp2 = "overlap_start", timestamp2 = "overlap_end", 
-#&gt;         sample_id = "sample_id_o"), match_fun = list(`&gt;=`, `&lt;=`, 
-#&gt;         `==`)) %&gt;% group_by(timestamp2, overlap_id) %&gt;% mutate(overwrite_overlap = focal_encounter == 
-#&gt;         max(focal_encounter, na.rm = TRUE)) %&gt;% ungroup()
-#&gt; }
-#&gt; &lt;bytecode: 0x55692bb03b10&gt;
-#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

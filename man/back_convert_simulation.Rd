@@ -2,14 +2,14 @@
 % Please edit documentation in R/simulations_related.R
 \name{back_convert_simulation}
 \alias{back_convert_simulation}
-\title{Convert Simmulation results back to data format}
+\title{Convert Simulation results back to data format}
 \usage{
 back_convert_simulation(data)
 }
 \description{
-Convert Simmulation results back to data format
+Convert Simulation results back to data format
 }
 \examples{
 #> Source Code:
-back_convert_simmulation
+back_convert_simulation
 }

@@ -9,7 +9,3 @@ xyz_get(xyz, idx)
 \description{
 get XYZ from accelerometer data
 }
-\examples{
-#> Source Code:
-xyz_get
-}

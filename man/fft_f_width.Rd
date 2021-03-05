@@ -16,8 +16,4 @@ fft_f_width
 \details{
 7 inch = 178mm
 }
-\examples{
-#> Source Code:
-fft_f_width
-}
 \keyword{datasets}

@@ -9,7 +9,3 @@ p_init_hull(season)
 \description{
 initialize a field-trip specific base-plot (with individuals range)
 }
-\examples{
-#> Source Code:
-p_init_hull
-}

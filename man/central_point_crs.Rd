@@ -13,8 +13,4 @@ central_point_crs
 \description{
 Set Projection of Central Point of Area Covered by Tracks
 }
-\examples{
-#> Source Code:
-central_point_crs
-}
 \keyword{datasets}

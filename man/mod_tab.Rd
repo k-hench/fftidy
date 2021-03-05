@@ -9,7 +9,3 @@ mod_tab(mod)
 \description{
 wrapper to get sigma, tauH, tauF, and speed estimates of a model
 }
-\examples{
-#> Source Code:
-mod_tab
-}

@@ -9,7 +9,3 @@ update_model(mod, update_fun, ...)
 \description{
 manipulate ctmm model and output new model alongside original for comparison plot
 }
-\examples{
-#> Source Code:
-update_model
-}

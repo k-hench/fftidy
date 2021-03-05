@@ -1,8 +1,5 @@
 #' crop a sf obj to the project bounding box
 #' @export
-#' @examples
-#' #> Source Code:
-#' crp
 crp <- function(poly, bbox = bb){
   sf::st_intersection(poly,sf::st_set_crs(sf::st_as_sf(as(raster::extent(bbox$p1$long, bbox$p2$long,
                                                              bbox$p1$lat, bbox$p2$lat),
@@ -12,16 +9,10 @@ crp <- function(poly, bbox = bb){
 
 #' subset a list of lists by a common index (the n_th object of each sub-list)
 #' @export
-#' @examples
-#' #> Source Code:
-#' subs
 subs <- function(x,idx){purrr::map(x,`[[`,idx)}
 
 #' turn a tibble with a lat and long column into a set sf points
 #' @export
-#' @examples
-#' #> Source Code:
-#' tibble_to_sf
 tibble_to_sf <- function(tib, crs = 4326){
   tib %>%
     dplyr::rename(long = "location.long",
@@ -32,9 +23,6 @@ tibble_to_sf <- function(tib, crs = 4326){
 
 #' extract the time of the day from a date-time (as numeric seconds)
 #' @export
-#' @examples
-#' #> Source Code:
-#' dtim
 dtim <- function(x){
   lubridate::hour(x) * 3600 +
     lubridate::minute(x) * 60 +
@@ -43,9 +31,6 @@ dtim <- function(x){
 
 #' create the convex hull of a two column tibble with lat long columns (output as sf-obj)
 #' @export
-#' @examples
-#' #> Source Code:
-#' df_as_sf
 df_as_sf <- function(x){
   select_x <- grDevices::chull(x)
   as.matrix(x)[c(select_x,select_x[1]),] %>%
@@ -55,9 +40,6 @@ df_as_sf <- function(x){
 
 #' create the convex hull of a two column tibble with lat long columns (output as tibble)
 #' @export
-#' @examples
-#' #> Source Code:
-#' hull_tib
 hull_tib <- function(x){
   select_x <- grDevices::chull(x)
   as.matrix(x)[c(select_x,select_x[1]),] %>%
@@ -66,9 +48,6 @@ hull_tib <- function(x){
 
 #' plot all centroids within a tibble-column of sf-objects
 #' @export
-#' @examples
-#' #> Source Code:
-#' cent_plotter
 cent_plotter <- function(sf_centroid, individual.local.identifier, ...){
   id <- individual.local.identifier
   ggplot2::geom_sf(data = sf_centroid, aes(fill = id),
@@ -77,9 +56,6 @@ cent_plotter <- function(sf_centroid, individual.local.identifier, ...){
 
 #' plot all hulls within a tibble-column of sf-objects
 #' @export
-#' @examples
-#' #> Source Code:
-#' hull_plotter
 hull_plotter <- function(sf,individual.local.identifier,...){
   id <- individual.local.identifier
   ggplot2::geom_sf(data = sf, aes( fill = id,color = id), shape =21,size = 1, alpha = .3)
@@ -87,9 +63,6 @@ hull_plotter <- function(sf,individual.local.identifier,...){
 
 #' initialize a field-trip specific base-plot
 #' @export
-#' @examples
-#' #> Source Code:
-#' p_init
 p_init <- function(season){
   ext_data %>%
     dplyr::filter(field_season == season) %>%
@@ -116,9 +89,6 @@ p_init <- function(season){
 
 #' initialize a field-trip specific base-plot (with individuals range)
 #' @export
-#' @examples
-#' #> Source Code:
-#' p_init_hull
 p_init_hull <- function(season){
   plt_data <- ext_data %>%
     dplyr::filter(field_season == season)
@@ -151,9 +121,6 @@ p_init_hull <- function(season){
 
 #' merge multiple sf columns
 #' @export
-#' @examples
-#' #> Source Code:
-#' merge_sf_columns
 merge_sf_columns <- function(col, data){
   col %>% sf::st_as_sf() %>% `sf::st_crs<-`(4326) %>%
     dplyr::mutate(individual.local.identifier = data$individual.local.identifier,
@@ -162,9 +129,6 @@ merge_sf_columns <- function(col, data){
 
 #' Base plot for voronoi layers
 #' @export
-#' @examples
-#' #> Source Code:
-#' p_init_voronoi
 p_init_voronoi <- function(season){
   p_init(season) +
     ggforce::geom_voronoi_tile(data = hulls %>%
@@ -175,9 +139,6 @@ p_init_voronoi <- function(season){
 
 #' combine several sf-points and create a joint centroid
 #' @export
-#' @examples
-#' #> Source Code:
-#' centroid_of_points
 centroid_of_points <- function(x){
   x %>%
     sf::st_union() %>%
@@ -186,9 +147,6 @@ centroid_of_points <- function(x){
 
 #' given a table with synchronous positions, compute all distances for a specific column-pair (sample-pair)
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_pw_dists
 get_pw_dists <- function(data, ind1, ind2, ...){
   tidyr::tibble(idx = data$idx, dist = st_distance( data[[ind1]] , data[[ind2]], by_element = T))%>%
     purrr::set_names(nm = c("idx", str_c(ind1,"-",ind2)))
@@ -196,9 +154,6 @@ get_pw_dists <- function(data, ind1, ind2, ...){
 
 #' transform a wide tibble with pair-wise distances into a distance-matrix
 #' @export
-#' @examples
-#' #> Source Code:
-#' wide_to_distmat
 wide_to_distmat <- function(tib){
   out_mat <- tib %>%
     dplyr::select(-ind1) %>%
@@ -210,9 +165,6 @@ wide_to_distmat <- function(tib){
 
 #' convert an igraph-graph into a tidygraph tbl_graph, annotate with the idx (later to become the time-bin), and compute tdiverse node-centralities
 #' @export
-#' @examples
-#' #> Source Code:
-#' idx_graph
 idx_graph <- function(g, idx){
   tidygraph::as_tbl_graph(g)  %>%
     tidygraph::activate(nodes) %>%

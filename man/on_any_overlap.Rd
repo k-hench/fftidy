@@ -9,7 +9,3 @@ on_any_overlap(x)
 \description{
 Determine if timepoint x is on any overlap
 }
-\examples{
-#> Source Code:
-on_any_overlap
-}

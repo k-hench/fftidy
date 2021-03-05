@@ -9,7 +9,3 @@ s_to_day(x)
 \description{
 convert SI units (s -> day)
 }
-\examples{
-#> Source Code:
-s_to_day
-}

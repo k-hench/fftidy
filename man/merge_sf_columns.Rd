@@ -9,7 +9,3 @@ merge_sf_columns(col, data)
 \description{
 merge multiple sf columns
 }
-\examples{
-#> Source Code:
-merge_sf_columns
-}

@@ -9,7 +9,3 @@ plot_svfs(variogram, colors = clr_set_base)
 \description{
 function to create a variogram plot pair (initial close up and total data range)
 }
-\examples{
-#> Source Code:
-plot_svfs
-}

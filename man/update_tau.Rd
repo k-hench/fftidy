@@ -9,7 +9,3 @@ update_tau(mod, tauH, tauF, ...)
 \description{
 manipulate ctmm model tau entry
 }
-\examples{
-#> Source Code:
-update_tau
-}

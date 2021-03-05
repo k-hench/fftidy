@@ -37,38 +37,3 @@ https://github.com/tidyverse/ggplot2/issues/1399
 
 Only the parameters height, width and angle have been added.
 }
-\examples{
-grobs <- list(hypo_anno_single(species = 'indigo',
-                  circle_fill = clr[2],
-                  circle_lwd = 1,circle_color = 'black') \%>\%
-                ggplotGrob(),
-              hypo_anno_single(species = 'chlorurus',
-                  circle_fill = clr[1],
-                  circle_lwd = 1,circle_color = 'black') \%>\%
-                ggplotGrob())
-
-grob_list <- tibble(RUN = c('ind', 'chl'),
-                    angle = c(30, -30),
-                    height = c(.7,.5),
-                    grob = grobs)
-
-test_df <- tibble(x = rep(1:10, 2),
-                  y = rnorm(20),
-                  RUN = rep(c('ind', 'chl'), each = 10))
-
-ggplot()+
-  facet_grid(RUN~.)+
-  geom_hypo_grob(data=grob_list,
-                 aes(grob=grob,angle=angle,height=height),
-                 inherit.aes = FALSE, x = .85, y=0.5)+
-  geom_line(data = test_df,
-            aes(x=x,y=y,color=RUN),size=2)+
-  geom_point(data = test_df,
-             aes(x=x,y=y,fill=RUN),shape=21,size=4)+
-  scale_x_continuous(expand=c(0,0),limits = c(0,14))+
-  scale_fill_manual(values = clr)+
-  scale_color_manual(values = clr)+
-  theme_gray()+theme(legend.position = 'bottom')
-#> Source Code:
-geom_hypo_grob
-}

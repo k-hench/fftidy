@@ -9,7 +9,3 @@ p_init_voronoi(season)
 \description{
 Base plot for voronoi layers
 }
-\examples{
-#> Source Code:
-p_init_voronoi
-}

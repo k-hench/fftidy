@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90021</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90022</span>
       </span>
     </div>
 
@@ -129,31 +129,6 @@
 
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
-<span class='no'>sample_as_stars</span></div><div class='output co'>#&gt; function (sample_id, res = 50, data_in, ...) 
-#&gt; {
-#&gt;     r_sample_empty &lt;- data_slim_sf %&gt;% filter(individual.local.identifier == 
-#&gt;         sample_id) %&gt;% sf_raster_empty(res = res)
-#&gt;     r_sample_empty[] &lt;- NA
-#&gt;     empty_stars &lt;- r_sample_empty %&gt;% stars:::st_as_stars()
-#&gt;     pre_aggregate &lt;- data_in %&gt;% filter(individual.local.identifier == 
-#&gt;         sample_id) %&gt;% select(dist_to_noon_h, geometry) %&gt;% stars::st_rasterize()
-#&gt;     sample_star1 &lt;- pre_aggregate %&gt;% stars:::aggregate.stars(by = empty_stars, 
-#&gt;         FUN = mean, na.rm = TRUE) %&gt;% st_as_sf()
-#&gt;     sample_star2 &lt;- pre_aggregate %&gt;% stars:::aggregate.stars(by = empty_stars, 
-#&gt;         FUN = sd, na.rm = TRUE) %&gt;% st_as_sf()
-#&gt;     sample_star3 &lt;- pre_aggregate %&gt;% stars:::aggregate.stars(by = empty_stars, 
-#&gt;         FUN = count_no_na) %&gt;% st_as_sf()
-#&gt;     names(sample_star1)[[1]] &lt;- "mean_h"
-#&gt;     names(sample_star2)[[1]] &lt;- "sd_h"
-#&gt;     names(sample_star3)[[1]] &lt;- "n"
-#&gt;     sample_star &lt;- st_join(sample_star1, sample_star2) %&gt;% st_join(., 
-#&gt;         sample_star3) %&gt;% mutate(sample_id = sample_id)
-#&gt;     sample_star
-#&gt; }
-#&gt; &lt;bytecode: 0x556929a3e1c0&gt;
-#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

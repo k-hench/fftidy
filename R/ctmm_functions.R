@@ -1,8 +1,5 @@
 #' function to plot a variogram in the correct color of athe sample
 #' @export
-#' @examples
-#' #> Source Code:
-#' plot_svfs_single
 plot_svfs_single <- function(variogram, colors = clr_set_base){
   color <- colors[[attributes(variogram)$info$identity]]
   level <- c(0.95) # 50% and 95% CIs
@@ -11,9 +8,6 @@ plot_svfs_single <- function(variogram, colors = clr_set_base){
 
 #' function to create a variogram plot pair (initial close up and total data range)
 #' @export
-#' @examples
-#' #> Source Code:
-#' plot_svfs
 plot_svfs <- function(variogram, colors = clr_set_base){
   color <- colors[[attributes(variogram)$info$identity]]
   level <- c(0.5, 0.95) # 50% and 95% CIs
@@ -24,9 +18,6 @@ plot_svfs <- function(variogram, colors = clr_set_base){
 
 #' function to compare variogram with a model fit (initial close up and total data range)
 #' @export
-#' @examples
-#' #> Source Code:
-#' plot_svf_vs_model
 plot_svf_vs_model <- function(variogram, mod,  colors = clr_set_base, ...){
   color <- colors[[attributes(variogram)$info$identity]]
   xlim <- c(0, 12 %#% "hour") # 0-12 hour window
@@ -36,9 +27,6 @@ plot_svf_vs_model <- function(variogram, mod,  colors = clr_set_base, ...){
 
 #' manipulate ctmm model tau entry
 #' @export
-#' @examples
-#' #> Source Code:
-#' update_tau
 update_tau <- function(mod, tauH, tauF, ...){
   mod$tau[[1]] <- tauH
   mod$tau[[2]] <- tauF
@@ -47,9 +35,6 @@ update_tau <- function(mod, tauH, tauF, ...){
 
 #' manipulate ctmm model and output new model alongside original for comparison plot
 #' @export
-#' @examples
-#' #> Source Code:
-#' update_model
 update_model <- function(mod, update_fun, ...){
   new_mod <- update_fun(mod = mod, ...)
   list(mod, new_mod)
@@ -57,18 +42,12 @@ update_model <- function(mod, update_fun, ...){
 
 #' plot two model (original guess and modified) in context of variogram (in right colors)
 #' @export
-#' @examples
-#' #> Source Code:
-#' plot_ctm
 plot_ctm <- function(mod, svf, ...){
   ctmm:::plot.variogram(x = svf, CTMM = mod, col = clr_set_base[attributes(svf)$info$identity], ...)
 }
 
 #' function to compare variogram with all ML model fits (initial close up and total data range)
 #' @export
-#' @examples
-#' #> Source Code:
-#' compare_all_models
 compare_all_models <- function(id, svfs, fitted_mods, ...){
   id_idx <- which(fitted_mods$sample_id == id)
 
@@ -87,9 +66,6 @@ compare_all_models <- function(id, svfs, fitted_mods, ...){
 
 #' function to compare variogram with the n best ML model fits (initial close up and total data range)
 #' @export
-#' @examples
-#' #> Source Code:
-#' compare_n_best_models
 compare_n_best_models <- function(id, svfs, n_mod_max = 5,  fitted_mods, ...){
   id_idx <- which(fitted_mods$sample_id == id)
 
@@ -106,17 +82,12 @@ compare_n_best_models <- function(id, svfs, n_mod_max = 5,  fitted_mods, ...){
        col = clr_set_base[[id]], col.CTMM = clr_mod, fraction =1)
 }
 
-
-
 # /// --------------------------------------------------------------
 
 #' functions to parse estimated model parameters (mu & tau) from ctmm
 #'
 #'  get the estimate units and round estimate to two digits
 #' @export
-#' @examples
-#' #> Source Code:
-#' parse_cis
 parse_cis <- function(mod, ci_type){
   ci_type_idx <- c(low = 1, est = 2, high = 3)[[ci_type]]
   cis <- summary(mod)$CI[, ci_type_idx]
@@ -129,9 +100,6 @@ parse_cis <- function(mod, ci_type){
 
 #' universal function (works for both OU & OUF)
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_ci_univ
 get_ci_univ <- function(mod, ci_idx, ci_type = "est",  ...){
   cis <- parse_cis(mod, ci_type)
   str_c(cis[[ci_idx]] %>% round(.,2),"_", names(cis)[[ci_idx]])
@@ -139,9 +107,6 @@ get_ci_univ <- function(mod, ci_idx, ci_type = "est",  ...){
 
 #' function for OUF specific parameters (tau2)
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_ci_ouf
 get_ci_ouf <- function(mod, ci_idx, ci_type = "est", ...){
   mod_type <- summary(mod)$name
   if(mod_type == "OUF anisotropic"){
@@ -152,9 +117,6 @@ get_ci_ouf <- function(mod, ci_idx, ci_type = "est", ...){
 
 #' wrapper to get sigma, tauH, tauF, and speed estimates of a model
 #' @export
-#' @examples
-#' #> Source Code:
-#' mod_tab
 mod_tab <- function(mod){
   tibble( est_sig = get_ci_univ(mod = mod, ci_idx = 1),
           est_tau_pos = get_ci_univ(mod = mod, ci_idx = 2),
@@ -164,9 +126,6 @@ mod_tab <- function(mod){
 
 #' separate  ctmm model estimates from units
 #' @export
-#' @examples
-#' #> Source Code:
-#' separate_mod_tab
 separate_mod_tab <- function(tab){
   tab %>%
     separate(est_sig, into = c("est_σ", "σ_unit"), sep = "_", convert = TRUE) %>%
@@ -179,9 +138,6 @@ separate_mod_tab <- function(tab){
 
 #' function to create and fit a Ornstein-Uhlenbeck-F model to a semi-variance function
 #' @export
-#' @examples
-#' #> Source Code:
-#' fit_ouf
 fit_ouf <- function(svf, sigma, tauH, tauF){
   m.ouf <- ctmm(sigma = sigma %#% "ha",tau = c(tauH %#% "hour", tauF %#% "min"))
   plot_svf_vs_model(svf, m.ouf)
@@ -190,9 +146,6 @@ fit_ouf <- function(svf, sigma, tauH, tauF){
 
 #' function for automatizing autocorrelated kernel density estimation
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_akde
 get_akde <- function(data, fitted_mls, id, ...){
   cat(paste0(id,"\n"))
   akde(data[[id]], fitted_mls$best_model[fitted_mls$sample_id == id])
@@ -200,24 +153,15 @@ get_akde <- function(data, fitted_mls, id, ...){
 
 #' convert SI units (m2 -> ha)
 #' @export
-#' @examples
-#' #> Source Code:
-#' m2_to_ha
 m2_to_ha <- function(x){x / (100*100)}
 
 
 #' convert SI units (s -> day)
 #' @export
-#' @examples
-#' #> Source Code:
-#' s_to_day
 s_to_day <- function(x){x / (60*60*24)}
 
 #' convert a svf to a tibble
 #' @export
-#' @examples
-#' #> Source Code:
-#' svf_to_tibble
 svf_to_tibble <- function(svf, ci_level = .05){
   svf %>%
     as_tibble() %>%
@@ -233,9 +177,6 @@ svf_to_tibble <- function(svf, ci_level = .05){
 #' It now returns the internally computed SVF (by using plot_svf - the altered version of ctmm:::plot.svf())
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' plot_variogram
 plot_variogram <- function(x, CTMM = NULL, level = 0.95, units = TRUE, fraction = 0.5,
                            col = "black", col.CTMM = "red", xlim = NULL, ylim = NULL, ext = NULL, ...)
 {
@@ -418,7 +359,6 @@ plot_variogram <- function(x, CTMM = NULL, level = 0.95, units = TRUE, fraction 
   return(ret_svf)
 }
 
-
 # ==============================================================================
 
 #' modified plot.svf from {ctmm}
@@ -428,9 +368,6 @@ plot_variogram <- function(x, CTMM = NULL, level = 0.95, units = TRUE, fraction 
 #' It now returns the internally computed SVF
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' plot_svf
 plot_svf <- function(lag,CTMM,error=NULL,alpha=0.05,col="red",type="l",...)
 {
   # changed from max lag to all lags
@@ -471,9 +408,6 @@ plot_svf <- function(lag,CTMM,error=NULL,alpha=0.05,col="red",type="l",...)
 
 #' Extract a fitted parameter from a ctmm object
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_var_fit_raw
 get_var_fit_raw <- function(vario, model = "ou"){
   var_f <- variogram.fit(variogram = vario,interactive = FALSE)
 
@@ -485,9 +419,6 @@ get_var_fit_raw <- function(vario, model = "ou"){
 
 #' Extract a OU fitted parameter from a ctmm object
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_var_fit_ou
 get_var_fit_ou <- function(vario, xlim = c(0, 50), n = 200){
   var_f <- variogram.fit(variogram = vario,interactive = FALSE)
   m.ou <- ctmm(sigma = var_f$sigma[[1]] %#% "m^2",tau = var_f$tau[[1]] %#% "sec")
@@ -501,9 +432,6 @@ get_var_fit_ou <- function(vario, xlim = c(0, 50), n = 200){
 
 #' Extract a OUF fitted parameter from a ctmm object
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_var_fit_ouf
 get_var_fit_ouf <- function(vario, xlim = c(0, 50), n = 200){
   var_f <- variogram.fit(variogram = vario,interactive = FALSE)
   m.ou <- ctmm(sigma = var_f$sigma[[1]] %#% "m^2",tau = c(var_f$tau[[1]] %#% "sec", var_f$tau[[2]] %#% "sec"))
@@ -517,9 +445,6 @@ get_var_fit_ouf <- function(vario, xlim = c(0, 50), n = 200){
 
 #' Get the parameter estimates from a ctmm fitted model
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_param_estimate
 get_param_estimate <- function(mod){
   summary(mod)$CI %>%
     as.data.frame() %>%
@@ -529,9 +454,6 @@ get_param_estimate <- function(mod){
 
 #' Load all ctmm fitted models
 #' @export
-#' @examples
-#' #> Source Code:
-#' read_all_ml_fits
 read_all_ml_fits <- function(files){
   files %>%
     purrr::map_dfr(readRDS) %>%
@@ -545,9 +467,6 @@ read_all_ml_fits <- function(files){
 
 #' Load ctmm based AKDEs by Sample ID
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_akde_maual
 get_akde_maual <- function(data, fitted_mls, id, ...){
   cat(paste0(id, "\n"))
 
@@ -558,9 +477,6 @@ get_akde_maual <- function(data, fitted_mls, id, ...){
 
 #' Load ctmm based AKDEs grouped by field season
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_akde_aligned
 get_akde_aligned <- function(data, fitted_mls, year, ...){
   cat(paste0(year, "\n"))
 
@@ -573,9 +489,6 @@ get_akde_aligned <- function(data, fitted_mls, year, ...){
 
 #' Load ctmm based kriged occurrences by Sample ID
 #' @export
-#' @examples
-#' #> Source Code:
-#' get_kriged_occurrence_maual
 get_kriged_occurrence_maual <- function (data, fitted_mls, id, ...) {
   cat(paste0(id, "\n"))
   tibble(sample_id = id,

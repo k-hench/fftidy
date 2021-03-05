@@ -16,8 +16,4 @@ fft_lwd
 \details{
 This sets the default linewidth thoughout the figures.
 }
-\examples{
-#> Source Code:
-fft_lwd
-}
 \keyword{datasets}

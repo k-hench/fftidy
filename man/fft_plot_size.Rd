@@ -16,8 +16,4 @@ fft_plot_size
 \details{
 This sets the default size of data points thoughout the figures.
 }
-\examples{
-#> Source Code:
-fft_plot_size
-}
 \keyword{datasets}

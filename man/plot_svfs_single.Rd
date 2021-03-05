@@ -9,7 +9,3 @@ plot_svfs_single(variogram, colors = clr_set_base)
 \description{
 function to plot a variogram in the correct color of athe sample
 }
-\examples{
-#> Source Code:
-plot_svfs_single
-}

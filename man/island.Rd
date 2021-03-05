@@ -13,10 +13,4 @@ island
 \description{
 Load Isla Barro Colorado Outline
 }
-\examples{
-#> Source Code:
-island
-#> -------------------
-ggplot()+ geom_sf(data = island)
-}
 \keyword{datasets}

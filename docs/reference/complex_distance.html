@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90021</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90022</span>
       </span>
     </div>
 
@@ -129,22 +129,6 @@
 
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
-<span class='no'>complex_distance</span></div><div class='output co'>#&gt; function (data, ind1, ind2, ...) 
-#&gt; {
-#&gt;     d1 &lt;- data$data[[which(data$individual.local.identifier == 
-#&gt;         ind1)]] %&gt;% dplyr::select(Z, timestamp2) %&gt;% set_names(., 
-#&gt;         nm = c("ind1", "timestamp2"))
-#&gt;     d2 &lt;- data$data[[which(data$individual.local.identifier == 
-#&gt;         ind2)]] %&gt;% dplyr::select(Z, timestamp2) %&gt;% set_names(., 
-#&gt;         nm = c("ind2", "timestamp2"))
-#&gt;     full_join(d1, d2) %&gt;% mutate(complex_distance = Mod(ind1 - 
-#&gt;         ind2)) %&gt;% dplyr::select(-ind1, -ind2) %&gt;% set_names(., 
-#&gt;         nm = c("timestamp2", str_c(ind1, "-", ind2)))
-#&gt; }
-#&gt; &lt;bytecode: 0x55692f3602d8&gt;
-#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

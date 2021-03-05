@@ -5,9 +5,6 @@
 #' The IDs are ordered according to their occurrence in the FFT data set.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' sample_ids
 sample_ids <- c("Bob 4661", "Da Vinci 5764", "Ibeth 4654",
                 "Martinelli 5763", "Mimi 4660", "Norah 4655",
                 "Olga 4657", "Valoy 5766")
@@ -19,9 +16,6 @@ sample_ids <- c("Bob 4661", "Da Vinci 5764", "Ibeth 4654",
 #' This sets the default size of data points thoughout the figures.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_plot_size
 fft_plot_size <- .2
 
 #' Default plot linewidth
@@ -31,9 +25,6 @@ fft_plot_size <- .2
 #' This sets the default linewidth thoughout the figures.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_lwd
 fft_lwd <- .25
 
 #' Default plot font size
@@ -43,9 +34,6 @@ fft_lwd <- .25
 #' This sets the default font size of text thoughout the figures.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_text_size
 fft_text_size <- 7
 
 #' Small plot font size
@@ -55,9 +43,6 @@ fft_text_size <- 7
 #' This sets the small font size of text for the figures (legends).
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_text_size_small
 fft_text_size_small <- 6
 
 #' Default figure width (double column)
@@ -67,9 +52,6 @@ fft_text_size_small <- 6
 #' 7 inch = 178mm
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_f_width
 fft_f_width <- 7
 
 #' Default figure width (single column)
@@ -79,9 +61,6 @@ fft_f_width <- 7
 #' 3.43 inch = 87mm
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_f_width_half
 fft_f_width_half <- 3.43
 
 #' Project case
@@ -93,12 +72,6 @@ fft_f_width_half <- 3.43
 #' resubmission to a different journal.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_case
-#' #> -------------------
-#' fft_case(letters[1:5])
-#' fft_case(LETTERS[1:5])
 fft_case <- function(x){
   stringr::str_to_lower(x)
 }
@@ -113,10 +86,6 @@ fft_case <- function(x){
 #' resubmission to a different journal.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' fft_case_inv(letters[1:5])
-#' fft_case_inv(LETTERS[1:5])
 fft_case_inv <- function(x){
   stringr::str_to_upper(x)
 }
@@ -126,9 +95,6 @@ fft_case_inv <- function(x){
 #' \code{bic_proj} holds the project UTM projection.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' bic_proj
 bic_proj <- "+proj=utm +zone=17 +north +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"
 
 #' Highlighter Color
@@ -136,9 +102,6 @@ bic_proj <- "+proj=utm +zone=17 +north +datum=WGS84 +units=m +no_defs +ellps=WGS
 #' \code{clr_accent} defines a highlighter color.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' clr_accent
 clr_accent <- "#ff8b3e"
 
 #' Water Color
@@ -146,9 +109,6 @@ clr_accent <- "#ff8b3e"
 #' \code{clr_water} defines a water color for maps.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' clr_water
 clr_water <- "#E5E5E5" %>% prismatic::clr_darken(shift = .15)
 
 #' Abbreviations of sample IDs
@@ -156,9 +116,6 @@ clr_water <- "#E5E5E5" %>% prismatic::clr_darken(shift = .15)
 #' \code{sample_ids_short} contains a two character sample ID abbreviation.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' sample_ids_short
 sample_ids_short <- sample_ids %>% set_names(nm = str_sub(sample_ids,1,2))
 
 #' Reference vector short to long sample ID
@@ -166,9 +123,6 @@ sample_ids_short <- sample_ids %>% set_names(nm = str_sub(sample_ids,1,2))
 #' \code{samples_short} contains a named vector of the sample IDs.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' samples_short
 samples_short <- sample_ids %>%
   set_names(nm = str_sub(sample_ids,1,2))
 
@@ -177,9 +131,6 @@ samples_short <- sample_ids %>%
 #' \code{neighbor_ids} contains all five character neighbor pair_ids.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' neighbor_ids
 neighbor_ids <- str_c(str_sub(neighboring_samples$west,1,2),
                       "-",
                       str_sub(neighboring_samples$east,1,2))
@@ -189,9 +140,6 @@ neighbor_ids <- str_c(str_sub(neighboring_samples$west,1,2),
 #' \code{guide_use} contains a constructor for ggplot guides.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' guide_use
 guide_use <- function(...){
   guide_colorbar(title = "Dipteryx Density",
                  title.position = "top",

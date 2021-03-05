@@ -9,7 +9,3 @@ get_var_fit_ou(vario, xlim = c(0, 50), n = 200)
 \description{
 Extract a OU fitted parameter from a ctmm object
 }
-\examples{
-#> Source Code:
-get_var_fit_ou
-}

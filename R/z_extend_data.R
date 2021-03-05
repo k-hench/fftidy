@@ -8,9 +8,6 @@
 #' @seealso [fftidy::extend_data()] a less saturated version of the color scheme.
 #'
 #' @export
-#' @examples
-#' #> Source Code:
-#' data_extend
 data_extend <- function(data){
   data %>%
     dplyr::mutate(date = glue::glue("{lubridate::year(timestamp)}-{lubridate::month(timestamp)}-{lubridate::day(timestamp)}")) %>%
@@ -55,6 +52,3 @@ data_extend <- function(data){
                     abs() %>%
                     as.numeric())
 }
-
-# #' @export
-# ext_data <- data  %>% data_extend()

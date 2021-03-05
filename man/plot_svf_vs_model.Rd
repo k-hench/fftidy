@@ -9,7 +9,3 @@ plot_svf_vs_model(variogram, mod, colors = clr_set_base, ...)
 \description{
 function to compare variogram with a model fit (initial close up and total data range)
 }
-\examples{
-#> Source Code:
-plot_svf_vs_model
-}

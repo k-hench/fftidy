@@ -18,10 +18,6 @@ https://github.com/tidyverse/ggplot2/issues/1399
 \details{
 Only the parameters height, width and angle have been added.
 }
-\examples{
-#> Source Code:
-hypo_geom_grob_custom
-}
 \seealso{
 \code{\link{geom_hypo_grob}}
 }

@@ -9,7 +9,3 @@ subs(x, idx)
 \description{
 subset a list of lists by a common index (the n_th object of each sub-list)
 }
-\examples{
-#> Source Code:
-subs
-}

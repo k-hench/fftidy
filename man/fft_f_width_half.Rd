@@ -16,8 +16,4 @@ fft_f_width_half
 \details{
 3.43 inch = 87mm
 }
-\examples{
-#> Source Code:
-fft_f_width_half
-}
 \keyword{datasets}

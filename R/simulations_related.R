@@ -55,12 +55,12 @@ simulate_id <- function(data, id_nr, ctmm_selcetion_type, fitted_tib){
           data_sf = list(data_sf))
 }
 
-#' Convert Simmulation results back to data format
+#' Convert Simulation results back to data format
 #'
 #' @export
 #' @examples
 #' #> Source Code:
-#' back_convert_simmulation
+#' back_convert_simulation
 back_convert_simulation <- function(data){
 
   data_date_crs <- data %>%

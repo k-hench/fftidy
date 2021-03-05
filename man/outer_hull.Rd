@@ -13,8 +13,4 @@ outer_hull
 \description{
 \code{outer_hull} creates the outer hull of all the track within the data set.
 }
-\examples{
-#> Source Code:
-outer_hull
-}
 \keyword{datasets}

@@ -9,7 +9,3 @@ separate_mod_tab(tab)
 \description{
 separate  ctmm model estimates from units
 }
-\examples{
-#> Source Code:
-separate_mod_tab
-}

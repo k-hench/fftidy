@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">fftidy</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90021</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.0.0.90022</span>
       </span>
     </div>
 
@@ -129,17 +129,6 @@
 
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'>#&gt; Source Code:</span>
-<span class='no'>p_init_voronoi</span></div><div class='output co'>#&gt; function (season) 
-#&gt; {
-#&gt;     p_init(season) + ggforce::geom_voronoi_tile(data = hulls %&gt;% 
-#&gt;         filter(field_season == season), aes(cent_x, cent_y, fill = individual.local.identifier, 
-#&gt;         group = -1L), max.radius = 0.007, bound = cbind(outer_hull_tib$location.long, 
-#&gt;         outer_hull_tib$location.lat), alpha = 0.3)
-#&gt; }
-#&gt; &lt;bytecode: 0x5569302f5cb8&gt;
-#&gt; &lt;environment: namespace:fftidy&gt;</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

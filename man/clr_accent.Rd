@@ -13,8 +13,4 @@ clr_accent
 \description{
 \code{clr_accent} defines a highlighter color.
 }
-\examples{
-#> Source Code:
-clr_accent
-}
 \keyword{datasets}

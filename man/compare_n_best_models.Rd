@@ -9,7 +9,3 @@ compare_n_best_models(id, svfs, n_mod_max = 5, fitted_mods, ...)
 \description{
 function to compare variogram with the n best ML model fits (initial close up and total data range)
 }
-\examples{
-#> Source Code:
-compare_n_best_models
-}

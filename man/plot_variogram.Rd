@@ -24,7 +24,3 @@ The function was altered from ctmm:::plot.variogram()
 \details{
 It now returns the internally computed SVF (by using plot_svf - the altered version of ctmm:::plot.svf())
 }
-\examples{
-#> Source Code:
-plot_variogram
-}

@@ -13,9 +13,3 @@ turn a tibble with a lat and long column into a set sf points
 
 Convert GPS tibble into sf object
 }
-\examples{
-#> Source Code:
-tibble_to_sf
-#> Source Code:
-tibble_to_sf
-}

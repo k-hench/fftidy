@@ -9,7 +9,3 @@ wide_to_distmat(tib)
 \description{
 transform a wide tibble with pair-wise distances into a distance-matrix
 }
-\examples{
-#> Source Code:
-wide_to_distmat
-}
